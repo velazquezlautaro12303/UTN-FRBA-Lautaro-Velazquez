@@ -12,6 +12,7 @@ Welcome to name-project's documentation!
    :caption: Contents:
 
    my-notebook
+   tp-semanal
 
 
 
