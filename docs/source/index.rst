@@ -7,13 +7,13 @@ Welcome to name-project's documentation!
 ========================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    :glob:
    :caption: Contents:
 
    my-notebook
    tp-semanal
-
+   guia-1   
 
 
 
