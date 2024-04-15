@@ -11,7 +11,6 @@ Welcome to name-project's documentation!
    :glob:
    :caption: Contents:
 
-   my-notebook
    tp-semanal
    guia-1   
 
