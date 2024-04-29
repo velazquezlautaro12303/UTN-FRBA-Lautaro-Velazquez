@@ -7,19 +7,11 @@ Welcome to name-project's documentation!
 ========================================
 
 .. toctree::
-   :maxdepth: 4
    :glob:
    :caption: Contents:
-
+  
+   example
    tp-semanal
    tp-semanal-2
-   guia-1   
-   example
+   guia-1 
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
