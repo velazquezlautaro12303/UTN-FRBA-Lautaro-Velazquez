@@ -8,8 +8,7 @@
 
 import sys
 import os
-sys.path.insert(0, os.path.abspath('./'))
-sys.path.insert(0, os.path.abspath('_static'))
+sys.path.insert(0, os.path.abspath('../..'))
 
 project = 'name-project'
 copyright = '2024, lavelazquez'
@@ -30,4 +29,4 @@ exclude_patterns = []
 
 # html_theme = 'pydata_sphinx_theme'
 html_theme = 'sphinx_rtd_theme'
-# html_static_path = ['_static']
+html_static_path = ['_static']
