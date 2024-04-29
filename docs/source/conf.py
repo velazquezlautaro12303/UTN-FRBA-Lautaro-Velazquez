@@ -9,6 +9,7 @@
 import sys
 import os
 sys.path.insert(0, os.path.abspath('./'))
+sys.path.insert(0, os.path.abspath('_static'))
 
 project = 'name-project'
 copyright = '2024, lavelazquez'
