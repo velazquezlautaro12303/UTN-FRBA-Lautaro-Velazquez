@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'name-project'
+project = 'Tareas UTN FRBA lavelazquez'
 copyright = '2024, lavelazquez'
 author = 'lavelazquez'
 
