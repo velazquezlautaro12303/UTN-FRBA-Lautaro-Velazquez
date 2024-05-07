@@ -55,9 +55,13 @@
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-2.html">TP-Semanal 2</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">TP SEMANAL 3 TC II</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#Enunciado">Enunciado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Manuscritos">Manuscritos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Simulacion-del-circuito-normalizado">Simulacion del circuito normalizado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Simulacion-circuito-de-plantilla-con-C-=-100nF">Simulacion circuito de plantilla con C = 100nF</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="guia-1.html">GUIA 1 : Medidas Electronicas 1 Utn FRBA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ds-cuidandonos.html">DS TP: Cuidandonos</a></li>
 </ul>
 
         </div>
@@ -89,6 +93,7 @@
 <section id="Enunciado">
 <h2>Enunciado<a class="headerlink" href="#Enunciado" title="Link to this heading"></a></h2>
 <p>A partir de la siguiente plantilla, sabiendo que:</p>
+<p><img alt="dc29985cc3194cf1a43ba5911dfcde1a" src="_images/image14.png" /></p>
 <p>Obtener la transferencia para máxima planicidad en la banda de paso utilizando los conceptos de partes de función. Recordar que: |T(jω)|2=T(jω)⋅T(−jω)=T(s)⋅T(−s)|s=jω</p>
 <p>Obtener el diagrama de polos y ceros, y un bosquejo de la respuesta en frecuencia.</p>
 <p>Implementar el circuito normalizado con estructuras pasivas separadas mediante buffers.</p>
@@ -100,8 +105,34 @@
 +10  🍺 Presentación en jupyter notebook.
 </pre></div>
 </div>
+</section>
+<section id="Manuscritos">
+<h2>Manuscritos<a class="headerlink" href="#Manuscritos" title="Link to this heading"></a></h2>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+<span class="n">IFrame</span><span class="p">(</span><span class="s2">&quot;./DocumentoEscaneado.pdf&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;100%&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;600&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<iframe
+    width="100%"
+    height="600"
+    src="./DocumentoEscaneado.pdf"
+    frameborder="0"
+    allowfullscreen
+
+></iframe></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -142,16 +173,24 @@
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/tp-semanal-3_1_0.png" src="_images/tp-semanal-3_1_0.png" />
+<img alt="_images/tp-semanal-3_3_0.png" src="_images/tp-semanal-3_3_0.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/tp-semanal-3_1_1.png" src="_images/tp-semanal-3_1_1.png" />
+<img alt="_images/tp-semanal-3_3_1.png" src="_images/tp-semanal-3_3_1.png" />
 </div>
 </div>
+</section>
+<section id="Simulacion-del-circuito-normalizado">
+<h2>Simulacion del circuito normalizado<a class="headerlink" href="#Simulacion-del-circuito-normalizado" title="Link to this heading"></a></h2>
+<p><img alt="fd4cab59cb2740159ead7883a404fe3c" src="_images/image11.png" /> <img alt="3e341b5f8fd14b1f94937becb0d070ac" src="_images/image12.png" /> <img alt="b496f3cdf22a4bec99de56a779c15ef4" src="_images/image13.png" /></p>
+</section>
+<section id="Simulacion-circuito-de-plantilla-con-C-=-100nF">
+<h2>Simulacion circuito de plantilla con C = 100nF<a class="headerlink" href="#Simulacion-circuito-de-plantilla-con-C-=-100nF" title="Link to this heading"></a></h2>
+<p><img alt="94c9a46fccd64a76ba2b05d63363a8aa" src="_images/image17.png" /> <img alt="421e6523be974cb185300c717af80ba2" src="_images/image15.png" /> <img alt="290a47c6ca354d6fbbdd040c83053c0d" src="_images/image16.png" /> <img alt="d1a9d47e0f8d4901ada31e445b41f365" src="_images/image18.png" /> <img alt="fa01fbd6e3ea49d2a13584750957c61f" src="_images/image19.png" /></p>
 </section>
 </section>
 
