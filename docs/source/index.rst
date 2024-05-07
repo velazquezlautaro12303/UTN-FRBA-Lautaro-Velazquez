@@ -14,5 +14,11 @@ Welcome to HomeWorks documentation!
    tp-semanal
    tp-semanal-2
    tp-semanal-3
-   guia-1 
+   guia-1
 
+PDF TPS
+===========
+
+.. raw:: html
+
+   <a href="Informe.pdf" download>Informe rediseño de Amplificador Clase D</a>
