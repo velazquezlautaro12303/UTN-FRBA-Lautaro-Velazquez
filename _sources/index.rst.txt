@@ -10,7 +10,6 @@ Welcome to HomeWorks documentation!
    :glob:
    :caption: Contents:
   
-   example
    tp-semanal
    tp-semanal-2
    tp-semanal-3

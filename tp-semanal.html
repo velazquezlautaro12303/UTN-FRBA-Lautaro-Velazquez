@@ -26,7 +26,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="TP-Semanal 2" href="tp-semanal-2.html" />
-    <link rel="prev" title="TP1 ME1" href="example.html" /> 
+    <link rel="prev" title="Welcome to HomeWorks documentation!" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,10 +50,17 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="example.html">TP1 ME1</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">TP-Semanal 1</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">TP-Semanal 1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Circuito">Circuito</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Transferencia">Transferencia</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Normalizacion">Normalizacion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Simulacion-con-Python">Simulacion con Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Simulacion">Simulacion</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-2.html">TP-Semanal 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-3.html">TP SEMANAL 3 TC II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-4.html">TP Semanal 4</a></li>
 <li class="toctree-l1"><a class="reference internal" href="guia-1.html">GUIA 1 : Medidas Electronicas 1 Utn FRBA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ds-cuidandonos.html">DS TP: Cuidandonos</a></li>
 </ul>
@@ -82,11 +89,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <p><img alt="0aadf6f1b7a54c67873f98489037d09c" class="no-scaled-link" src="_images/logo_UTN.svg" width="150" /></p>
+  <p><img alt="7a7f3e08d801455b82303f5e8515be21" class="no-scaled-link" src="_images/logo_UTN.svg" width="150" /></p>
 <section id="TP-Semanal-1">
 <h1>TP-Semanal 1<a class="headerlink" href="#TP-Semanal-1" title="Permalink to this heading"></a></h1>
+<section id="Circuito">
+<h2>Circuito<a class="headerlink" href="#Circuito" title="Permalink to this heading"></a></h2>
 <p>Dado el siguiente circuito:</p>
-<p><img alt="5a19e0261c6246f79538022dcf3fd261" src="_images/image.png" /></p>
+<p><img alt="e3badc9f6545401a89d7a655df54b561" src="_images/image.png" /></p>
+</section>
+<section id="Transferencia">
+<h2>Transferencia<a class="headerlink" href="#Transferencia" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Obtener la función transferencia V2/V1 ( módulo , fase y diagrama de polos y ceros).</p></li>
 </ol>
@@ -112,6 +124,9 @@ K=\frac{G_1}{G_2} \\
 \frac{V_0}{V_i}=\frac{S}{S+w_t}-K \cdot \frac{w_t}{S+w_t}
 \end{gathered}
 \end{equation}</span></p>
+</section>
+<section id="Normalizacion">
+<h2>Normalizacion<a class="headerlink" href="#Normalizacion" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple" start="2">
 <li><p>Proponga una norma de impedancia y frecuencia de forma tal de llegar a una transferencia normalizada.</p></li>
 </ol>
@@ -129,12 +144,15 @@ V^{+}=\frac{V_1 S C}{G_3+S C} \\
 Z=\frac{1}{G_3} \frac{S C+G_3}{S C+G_1}
 \end{gathered}
 \end{equation}</span></p>
+</section>
+<section id="Simulacion-con-Python">
+<h2>Simulacion con Python<a class="headerlink" href="#Simulacion-con-Python" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple" start="3">
 <li><p>Simule la función transferencia normalizada en Python.</p></li>
 </ol>
-<p>Se simulara con valores de K = [0, .5 , -.5]</p>
+<p>Se simulara con valores de K = 1</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -160,7 +178,7 @@ Z=\frac{1}{G_3} \frac{S C+G_3}{S C+G_1}
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -183,7 +201,7 @@ Z=\frac{1}{G_3} \frac{S C+G_3}{S C+G_1}
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
@@ -207,18 +225,8 @@ Z=\frac{1}{G_3} \frac{S C+G_3}{S C+G_1}
 
     <span class="k">return</span> <span class="n">num</span><span class="o">/</span><span class="n">den</span>
 
-<span class="n">print_subtitle</span><span class="p">(</span><span class="s1">&#39;Transferencia&#39;</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span> <span class="sa">r</span><span class="s1">&#39; \frac</span><span class="si">{V_o}{V_i}</span><span class="s1"> = &#39;</span> <span class="o">+</span> <span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">get_Transfer</span><span class="p">((</span><span class="n">eq1</span><span class="p">,</span> <span class="n">eq2</span><span class="p">),</span> <span class="p">(</span><span class="n">Vo</span><span class="p">,</span> <span class="n">Vi</span><span class="p">,</span> <span class="n">V</span><span class="p">)))))</span>
 </pre></div>
-</div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<section id="Transferencia">
-<h2>Transferencia<a class="headerlink" href="#Transferencia" title="Permalink to this heading"></a></h2>
-</section>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -228,21 +236,25 @@ Z=\frac{1}{G_3} \frac{S C+G_3}{S C+G_1}
 <div class="math notranslate nohighlight">
 $\displaystyle  \frac{V_o}{V_i} = \frac{S - \frac{G_{1} G_{3}}{C_{1} G_{2}}}{S + \frac{G_{3}}{C_{1}}}$</div></div>
 </div>
+</section>
+<section id="Simulacion">
+<h2>Simulacion<a class="headerlink" href="#Simulacion" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple" start="4">
 <li><p>Simule la red normaliza en LTspice, y obtenga su respuesta en frecuencia</p></li>
 </ol>
-<p><img alt="1301c890db3c4a77a5d0ce68d5c1d249" src="_images/image1.png" /></p>
+<p><img alt="30aa8bd1c0e9449fb57015d0d8d75884" src="_images/image1.png" /></p>
 <ol class="arabic simple" start="5">
 <li><p>¿Qué tipo de filtro es? ¿Qué utilidad podría tener este tipo de circuitos?</p></li>
 </ol>
 <p>Es un filtro pasa todo que para señales de baja frecuencia le cambia la fase.</p>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="example.html" class="btn btn-neutral float-left" title="TP1 ME1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to HomeWorks documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="tp-semanal-2.html" class="btn btn-neutral float-right" title="TP-Semanal 2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
