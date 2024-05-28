@@ -1,0 +1,286 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### GUIA 2 : Medidas Electronicas 1 Utn FRBA\n",
+    "\n",
+    "### Ejercicio 1\n",
+    "\n",
+    "<img src=\"image31.png\">"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "TBM R = 0.153542 K\n",
+      "No hace falta corregir ya q el em = -R_i/(R_V / 1000) = -0.000015 es mucho menor que u_c_R * K / R_i = 0.004367\n",
+      "R = 0.15354171K +- 0.00067058K @ 95%; k = 3.00\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "\n",
+    "RANGO = 200\n",
+    "ERROR_LECTURA = 0.05\n",
+    "ERROR_CUENTA = 2\n",
+    "CANT_MAX_CUENTAS = 200000\n",
+    "R_V = 10000000\n",
+    "\n",
+    "ERROR_CLASE = 0.2\n",
+    "ALCANCE = 150\n",
+    "DIVISIONES = 150\n",
+    "RA = 0.01\n",
+    "\n",
+    "V   = np.array([22.323, 22.325, 22.32, 22.331, 22.332, 22.33, 22.327, 22.323, 22.329, 22.325])\n",
+    "I   = np.array([145.1, 145.2, 144.9, 145.7, 145.2, 146.3, 145.3, 145.1, 145.9, 145.4])\n",
+    "\n",
+    "V_mean = V.mean()\n",
+    "I_mean = I.mean()\n",
+    "\n",
+    "u_i_V = V.std(ddof=1) / np.sqrt(V.size)\n",
+    "u_i_I = I.std(ddof=1) / np.sqrt(I.size)\n",
+    "\n",
+    "CORRELACION_MATRIX = np.corrcoef(V,I)\n",
+    "corr_VI = CORRELACION_MATRIX[0][1]\n",
+    "\n",
+    "R_i = V_mean / I_mean\n",
+    "\n",
+    "dR_dV = 1 / I_mean\n",
+    "dR_dI = - V_mean / I_mean**2 \n",
+    "\n",
+    "u_j_V = (ERROR_LECTURA / 100 * V_mean + ERROR_CUENTA * RANGO / CANT_MAX_CUENTAS) / np.sqrt(3)\n",
+    "u_j_I = (ERROR_CLASE * ALCANCE / DIVISIONES)\n",
+    "\n",
+    "u_c_V = np.sqrt(u_i_V**2 + u_j_V**2)\n",
+    "u_c_I = np.sqrt(u_i_I**2 + u_j_I**2)\n",
+    "\n",
+    "u_c_R = np.sqrt((dR_dV * u_c_V)**2 + (dR_dI * u_c_I)**2 + 2*dR_dI*dR_dV*corr_VI*u_c_V*u_c_I)\n",
+    "\n",
+    "V_eff = (u_c_R**4) / (((dR_dV * u_i_V)**4 + (dR_dI * u_i_I)**4) / (V.size - 1))\n",
+    "\n",
+    "K = 3   # De tabla distribucion T-Student entre 3 y 4 grados de libertad\n",
+    "\n",
+    "print (\"TBM R = %0.6f K\" % ((R_V * R_i)/(R_V + R_i)))\n",
+    "\n",
+    "print (\"No hace falta corregir ya q el em = -R_i/(R_V / 1000) = %0.6f es mucho menor que u_c_R * K / R_i = %0.6f\" % (-R_i/(R_V / 1000), u_c_R * K / R_i))\n",
+    "\n",
+    "print (\"R = %0.8fK +- %0.8fK @ 95%%; k = %0.2f\" %(R_i, u_c_R * K, K))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Ejercicio 2\n",
+    "\n",
+    "<img src=\"image32.png\">\n",
+    "\n",
+    "## Circuito\n",
+    "\n",
+    "<img src=\"image33.png\">\n",
+    "\n",
+    "## Em\n",
+    "\n",
+    "$$e_M = \\frac{V_V - V_G}{V_G}$$\n",
+    "$$e_M = \\frac{|V_G||\\frac{Z_V}{Z_G + Z_V}|-|V_G|}{|V_G|}$$\n",
+    "$$e_M = |\\frac{Z_V}{Z_G + Z_V}|-1$$\n",
+    "$$e_M = |\\frac{1}{\\frac{Z_G}{Z_V} + 1}|-1$$\n",
+    "$$e_M = |\\frac{1}{Y_V Z_G + 1}|-1$$\n",
+    "$$e_M = |\\frac{1}{(G_V + S (C_C + C_V)) R_G + 1}|-1$$\n",
+    "$$e_M = |\\frac{1}{(G_V + S (C_C + C_V)) R_G + 1}|-1$$\n",
+    "$$e_M = |\\frac{1}{G_V R_G + jw (C_C + C_V) R_G + 1}|-1$$\n",
+    "$$e_M = |\\frac{1}{\\sqrt{(G_V R_G + 1)^2 + (w (C_C + C_V) R_G)^2}}|-1$$\n",
+    "$$e_M = \\frac{R_V}{R_V + R_G}\\frac{1}{\\sqrt{1 + (w (C_C + C_V) R_G//R_V)^2}}-1$$\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Valores"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "e_M = -0.000818\n",
+      "u_j = 0.000702\n",
+      "Dado que e_M << u_j\n",
+      "Entonces se procede a corregir:\n",
+      "V = 1.857720\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "\n",
+    "R_G = 600\n",
+    "R_V = 1000000\n",
+    "C_C = 150 * 10**(-12)\n",
+    "C_V = 220 * 10**(-12)\n",
+    "F   = 15000 \n",
+    "\n",
+    "e_M = (R_V / (R_V + R_G)) / (np.sqrt(1 + (2*np.pi*F*(C_C + C_V)*((R_G * R_V)/(R_G + R_V)))**2)) - 1\n",
+    "\n",
+    "print (\"e_M = %0.6f\" % e_M)\n",
+    "\n",
+    "ESCALA = 2\n",
+    "ERROR_LECTURA = 0.05\n",
+    "ERROR_CUENTA = 2\n",
+    "CANT_MAX_CUENTAS = 20000\n",
+    "\n",
+    "V_i = 1.8562\n",
+    "\n",
+    "u_j = (ERROR_LECTURA / 100 + ERROR_CUENTA * ESCALA / CANT_MAX_CUENTAS / V_i) / np.sqrt(3) * 2\n",
+    "\n",
+    "print (\"u_j = %0.6f\" % u_j)\n",
+    "\n",
+    "print (\"\"\"Dado que e_M << u_j\n",
+    "Entonces se procede a corregir:\"\"\")\n",
+    "\n",
+    "print (\"V = %0.6f\" % (V_i / (1 + e_M)))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Ejercicio 3\n",
+    "\n",
+    "<img src=\"image34.png\">\n",
+    "\n",
+    "Dato del multimetro continua:\n",
+    "\n",
+    "<img src=\"image35.png\">"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Deduccion de $F_{|me|e}$ para señal Triangular\n",
+    "\n",
+    "$$F_{|me|e} = \\frac {\\frac {S_e}{S_{|me|}}} {K_{|me|}}$$\n",
+    "$$S_e = \\sqrt{\\frac{1}{T}\\int_0^T V(t)^2dt}$$\n",
+    "$$S_e = \\frac{V_p}{\\sqrt{3}}$$\n",
+    "$$S^+=\\delta S_{pp}$$\n",
+    "$$S^-=(1-\\delta) S_{pp}$$\n",
+    "$$S_{|me|}=\\frac{S_{pp}}{2}(2\\delta^2-2\\delta+1)$$\n",
+    "$$K_{|me|}=\\frac{\\pi}{2\\sqrt{2}}$$\n",
+    "$$F_{|me|e} = \\frac {\\frac{\\frac{V_p}{\\sqrt{3}}}{\\frac{S_{pp}}{2}(2\\delta^2-2\\delta+1)}}{\\frac{\\pi}{2\\sqrt{2}}}$$\n",
+    "$$F_{|me|e} = \\frac {2\\sqrt{2}} {\\pi(2\\delta^2-2\\delta+1)}$$\n",
+    "\n",
+    "$$S_i = S_{|me|}K_{|me|}$$\n",
+    "\n",
+    "Caso particular:\n",
+    "$$\\delta = \\frac{1}{2} => S_{|me|}=\\frac{S_{pp}}{4}$$"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 55,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "error metodo =  -0.04761904761904767\n",
+      "e_m >> u_c => Procedo a corregir\n",
+      "Vp+ = 2.999082V +- 0.020554V @ 95%\n",
+      "Vp- = -0.997782V +- 0.020554V @ 95%\n"
+     ]
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "\n",
+    "CANT_MEDICIONES = 5\n",
+    "\n",
+    "V_MEAN_DC = 0.953\n",
+    "V_MEAN_AC = 1.057\n",
+    "STD_DC = 0.0001\n",
+    "STD_AC = 0.00025\n",
+    "\n",
+    "RANGE = 4\n",
+    "RESOLUTION = 0.001\n",
+    "\n",
+    "ERROR_LECTURA_AC = 1\n",
+    "ERROR_CUENTA_AC = 5\n",
+    "\n",
+    "ERROR_LECTURA_DC = .8\n",
+    "ERROR_CUENTA_DC = 1\n",
+    "\n",
+    "R_V = 10000000\n",
+    "R_G = 500000\n",
+    "\n",
+    "u_i_V_DC = STD_DC / np.sqrt(CANT_MEDICIONES)\n",
+    "u_i_V_AC = STD_AC / np.sqrt(CANT_MEDICIONES)\n",
+    "\n",
+    "u_j_V_DC = ((ERROR_LECTURA_DC / 100) * V_MEAN_DC + RESOLUTION * ERROR_CUENTA_DC) / np.sqrt(3)\n",
+    "u_j_V_AC = ((ERROR_LECTURA_AC / 100) * V_MEAN_AC + RESOLUTION * ERROR_CUENTA_AC) / np.sqrt(3)\n",
+    "\n",
+    "u_c_V_DC = np.sqrt(u_i_V_DC**2 + u_j_V_DC**2)\n",
+    "u_c_V_AC = np.sqrt(u_i_V_AC**2 + u_j_V_AC**2)\n",
+    "\n",
+    "# Vp = DC + AC\n",
+    "u_c_Vp = np.sqrt(u_c_V_DC**2 + u_c_V_AC**2)\n",
+    "\n",
+    "Spp = 4 * V_MEAN_AC * 2 * np.sqrt(2) / np.pi \n",
+    "\n",
+    "e_m = 1/(1+(R_G/R_V)) - 1\n",
+    "\n",
+    "print (\"error metodo = \", e_m)\n",
+    "print (\"e_m >> u_c => Procedo a corregir\")\n",
+    "print (\"Vp+ = %0.6fV +- %0.6fV @ 95%%\" % ( (Spp/2 + V_MEAN_DC)/(1+e_m), u_c_Vp*2))\n",
+    "print (\"Vp- = %0.6fV +- %0.6fV @ 95%%\" % ((-Spp/2 + V_MEAN_DC)/(1+e_m), u_c_Vp*2))\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Ejercicio 4\n",
+    "\n",
+    "<img src=\"image36.png\">"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.8.10"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}

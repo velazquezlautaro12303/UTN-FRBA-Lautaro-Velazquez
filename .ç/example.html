@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TP1 ME1 &mdash; Tareas UTN FRBA lavelazquez  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/nbsphinx-code-cells.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tareas UTN FRBA lavelazquez
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal.html">TP-Semanal 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-2.html">TP-Semanal 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-3.html">TP SEMANAL 3 TC II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-4.html">TP Semanal 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guia-1.html">GUIA 1 : Medidas Electronicas 1 Utn FRBA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guia-2.html">GUIA 2 : Medidas Electronicas 1 Utn FRBA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ds-cuidandonos.html">DS TP: Cuidandonos</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tareas UTN FRBA lavelazquez</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">TP1 ME1</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/example.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="TP1-ME1">
+<h1>TP1 ME1<a class="headerlink" href="#TP1-ME1" title="Permalink to this heading"></a></h1>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="c1"># import openpyxl</span>
+
+<span class="c1"># Crear un nuevo libro de trabajo</span>
+<span class="c1"># wb = openpyxl.Workbook()</span>
+
+<span class="c1"># Seleccionar la hoja activa (por defecto es la primera hoja)</span>
+<span class="c1"># hoja = wb.active</span>
+
+<span class="c1"># Especifica la ruta de tu archivo Excel</span>
+<span class="n">ruta_archivo</span> <span class="o">=</span> <span class="s1">&#39;TP1_Medidas1.xlsx&#39;</span>
+
+<span class="c1"># Lee el archivo Excel en un DataFrame de pandas</span>
+<span class="n">datos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">ruta_archivo</span><span class="p">)</span>
+
+<span class="c1"># Especifica el tamaño del chunk (10 en este caso)</span>
+<span class="n">tamaño_chunk</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="n">format1</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%-20s</span><span class="s2"> </span><span class="si">%-20s</span><span class="s2"> </span><span class="si">%-20s</span><span class="s2"> </span><span class="si">%-25s</span><span class="s2"> </span><span class="si">%-20s</span><span class="s2"> </span><span class="si">%-20s</span><span class="s2"> </span><span class="si">%-20s</span><span class="s2"> </span><span class="si">%-15s</span><span class="s2"> </span><span class="si">%-20s</span><span class="s2">&quot;</span>
+<span class="n">format2</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">%-20f</span><span class="s2"> </span><span class="si">%-20f</span><span class="s2"> </span><span class="si">%-20f</span><span class="s2"> </span><span class="si">%-25f</span><span class="s2"> </span><span class="si">%-20f</span><span class="s2"> </span><span class="si">%-20f</span><span class="s2"> </span><span class="si">%-20f</span><span class="s2"> </span><span class="si">%-15s</span><span class="s2"> </span><span class="si">%-20f</span><span class="s2">&quot;</span>
+
+<span class="n">ERROR_LECTURA_HB113C</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">ERROR_CUENTAS_HB113C</span> <span class="o">=</span>  <span class="mi">5</span>
+<span class="n">CANT_MAX_CUENTAS</span> <span class="o">=</span> <span class="mi">2000</span>
+<span class="n">K</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]:</span>
+
+    <span class="c1"># hoja[&#39;A%i&#39; % (k*20)] = &quot;Valor Verdadero&quot;</span>
+    <span class="c1"># hoja[&#39;B%i&#39; % (k*20)] = &quot;Valor Medido&quot;</span>
+    <span class="c1"># hoja[&#39;C%i&#39; % (k*20)] = &quot;Desviacion&quot;</span>
+    <span class="c1"># hoja[&#39;D%i&#39; % (k*20)] = &quot;Incertidumbre Expandida&quot;</span>
+    <span class="c1"># hoja[&#39;E%i&#39; % (k*20)] = &quot;Valor Nominal&quot;</span>
+    <span class="c1"># hoja[&#39;F%i&#39; % (k*20)] = &quot;Valor Escala&quot;</span>
+    <span class="c1"># hoja[&#39;G%i&#39; % (k*20)] = &quot;Factor de Expansion&quot;</span>
+    <span class="c1"># hoja[&#39;H%i&#39; % (k*20)] = &quot;Verifica&quot;</span>
+    <span class="c1"># hoja[&#39;I%i&#39; % (k*20)] = &quot;U_j&quot;</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="n">format1</span> <span class="o">%</span> <span class="p">(</span><span class="s2">&quot;Valor Verdadero&quot;</span><span class="p">,</span> <span class="s2">&quot;Valor Medido&quot;</span><span class="p">,</span> <span class="s2">&quot;Desviacion&quot;</span><span class="p">,</span> <span class="s2">&quot;Incertidumbre Expandida&quot;</span><span class="p">,</span> <span class="s2">&quot;Valor Nominal&quot;</span><span class="p">,</span> <span class="s2">&quot;Valor Escala&quot;</span><span class="p">,</span> <span class="s2">&quot;Factor de Expansion&quot;</span><span class="p">,</span> <span class="s2">&quot;Verifica&quot;</span><span class="p">,</span> <span class="s2">&quot;U_j&quot;</span><span class="p">))</span>
+
+    <span class="c1"># Itera sobre el rango de índices en grupos de 10</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">datos</span><span class="p">),</span> <span class="n">tamaño_chunk</span><span class="p">):</span>
+
+        <span class="n">valorPatron</span>  <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">tamaño_chunk</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+        <span class="n">valorMedido1</span> <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="n">tamaño_chunk</span><span class="p">,</span> <span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">valorNominal</span> <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+        <span class="n">valorEscala</span>  <span class="o">=</span> <span class="n">datos</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+        <span class="n">ERROR_VOLT_X_CUENTA_HB113C</span> <span class="o">=</span> <span class="n">valorEscala</span> <span class="o">/</span> <span class="n">CANT_MAX_CUENTAS</span>
+
+        <span class="n">u_j_HB113C</span> <span class="o">=</span> <span class="p">(</span><span class="n">ERROR_LECTURA_HB113C</span> <span class="o">/</span> <span class="mi">100</span><span class="p">)</span> <span class="o">*</span> <span class="n">valorMedido1</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">+</span> <span class="n">ERROR_VOLT_X_CUENTA_HB113C</span> <span class="o">*</span> <span class="n">ERROR_CUENTAS_HB113C</span>
+
+        <span class="n">desviacion</span> <span class="o">=</span> <span class="n">valorMedido1</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">-</span> <span class="n">valorPatron</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+        <span class="n">u_i</span> <span class="o">=</span> <span class="n">valorMedido1</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+        <span class="n">incertidumbre_expandida</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">u_i</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">valorPatron</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+        <span class="n">verifica</span> <span class="o">=</span> <span class="s2">&quot;Si&quot;</span> <span class="k">if</span> <span class="p">(</span><span class="n">incertidumbre_expandida</span> <span class="o">&lt;=</span> <span class="n">u_j_HB113C</span><span class="p">)</span> <span class="k">else</span> <span class="s2">&quot;No&quot;</span>
+
+        <span class="nb">print</span> <span class="p">(</span><span class="n">format2</span> <span class="o">%</span> <span class="p">(</span><span class="n">valorPatron</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">valorMedido1</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">desviacion</span><span class="p">,</span> <span class="n">incertidumbre_expandida</span><span class="p">,</span> <span class="n">valorNominal</span><span class="p">,</span> <span class="n">valorEscala</span><span class="p">,</span> <span class="n">K</span><span class="p">,</span> <span class="n">verifica</span><span class="p">,</span> <span class="n">u_j_HB113C</span><span class="p">))</span>
+
+        <span class="c1"># output = output + format2 % (valorPatron.mean(), valorMedido1.mean(), desviacion, incertidumbre_expandida, valorNominal, valorEscala, K, verifica, u_j_HB113C)</span>
+
+        <span class="c1"># hoja[&#39;A%i&#39; % (i/10 + 2 + k*20)] = valorPatron.mean()</span>
+        <span class="c1"># hoja[&#39;B%i&#39; % (i/10 + 2 + k*20)] = valorMedido1.mean()</span>
+        <span class="c1"># hoja[&#39;C%i&#39; % (i/10 + 2 + k*20)] = desviacion</span>
+        <span class="c1"># hoja[&#39;D%i&#39; % (i/10 + 2 + k*20)] = incertidumbre_expandida</span>
+        <span class="c1"># hoja[&#39;E%i&#39; % (i/10 + 2 + k*20)] = valorNominal</span>
+        <span class="c1"># hoja[&#39;F%i&#39; % (i/10 + 2 + k*20)] = valorEscala</span>
+        <span class="c1"># hoja[&#39;G%i&#39; % (i/10 + 2 + k*20)] = K</span>
+        <span class="c1"># hoja[&#39;H%i&#39; % (i/10 + 2 + k*20)] = verifica</span>
+        <span class="c1"># hoja[&#39;I%i&#39; % (i/10 + 2 + k*20)] = u_j_HB113C</span>
+
+    <span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># Crear un deslizador</span>
+<span class="c1"># slider = widgets.IntSlider(min=0, max=len(output)-1, step=1, description=&#39;Índice de salida:&#39;)</span>
+
+<span class="c1"># Guardar el libro de trabajo</span>
+<span class="c1"># wb.save(&#39;archivo_excel.xlsx&#39;)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Valor Verdadero      Valor Medido         Desviacion           Incertidumbre Expandida   Valor Nominal        Valor Escala         Factor de Expansion  Verifica        U_j
+0.010833             0.010760             -0.000073            0.000151                  0.010000             0.200000             2.000000             Si              0.000554
+0.050346             0.095690             0.045344             0.045368                  0.050000             0.200000             2.000000             No              0.000978
+0.049975             0.049000             -0.000975            0.000014                  0.050000             2.000000             2.000000             Si              0.005245
+0.049382             0.040000             -0.009382            0.000019                  0.050000             20.000000            2.000000             Si              0.050200
+0.099083             0.099170             0.000087             0.000086                  0.100000             0.200000             2.000000             Si              0.000996
+0.101520             0.101000             -0.000520            0.000096                  0.100000             2.000000             2.000000             Si              0.005505
+0.102243             0.090000             -0.012243            0.000104                  0.100000             20.000000            2.000000             Si              0.050450
+1.201030             1.209100             0.008070             0.003102                  1.000000             2.000000             2.000000             Si              0.011045
+1.178752             1.159000             -0.019752            0.017817                  1.000000             20.000000            2.000000             Si              0.055795
+2.067252             1.911000             -0.156252            1.271667                  1.000000             1000.000000          2.000000             Si              2.509555
+10.049718            10.096000            0.046282             0.010808                  10.000000            20.000000            2.000000             Si              0.100480
+10.052220            9.900000             -0.152220            0.100468                  10.000000            200.000000           2.000000             Si              0.549500
+11.629100            10.610000            -1.019100            2.195704                  10.000000            1000.000000          2.000000             Si              2.553050
+25.063640            25.090000            0.026360             0.010391                  25.000000            200.000000           2.000000             Si              0.625450
+25.038889            25.000000            -0.038889            0.000401                  25.000000            1000.000000          2.000000             Si              2.625000
+
+Valor Verdadero      Valor Medido         Desviacion           Incertidumbre Expandida   Valor Nominal        Valor Escala         Factor de Expansion  Verifica        U_j
+0.010833             0.011900             0.001067             0.000162                  0.010000             0.200000             2.000000             Si              0.000559
+0.050346             0.049600             -0.000746            0.000004                  0.050000             0.200000             2.000000             Si              0.000748
+0.049975             0.048000             -0.001975            0.000014                  0.050000             2.000000             2.000000             Si              0.005240
+0.049382             0.040000             -0.009382            0.000019                  0.050000             20.000000            2.000000             Si              0.050200
+0.099083             0.097740             -0.001343            0.000056                  0.100000             0.200000             2.000000             Si              0.000989
+0.101520             0.098900             -0.002620            0.000139                  0.100000             2.000000             2.000000             Si              0.005495
+0.102243             0.091000             -0.011243            0.001005                  0.100000             20.000000            2.000000             Si              0.050455
+1.201030             1.183500             -0.017530            0.003072                  1.000000             2.000000             2.000000             Si              0.010918
+1.178752             1.134000             -0.044752            0.015026                  1.000000             20.000000            2.000000             Si              0.055670
+2.067252             1.888000             -0.179252            1.255293                  1.000000             1000.000000          2.000000             Si              2.509440
+10.049718            9.872000             -0.177718            0.008050                  10.000000            20.000000            2.000000             Si              0.099360
+10.052220            9.720000             -0.332220            0.080584                  10.000000            200.000000           2.000000             Si              0.548600
+11.629100            10.570000            -1.059100            2.166545                  10.000000            1000.000000          2.000000             Si              2.552850
+25.063640            24.550000            -0.513640            0.061978                  25.000000            200.000000           2.000000             Si              0.622750
+25.038889            24.000000            -1.038889            0.000401                  25.000000            1000.000000          2.000000             Si              2.620000
+
+</pre></div></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, lavelazquez.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

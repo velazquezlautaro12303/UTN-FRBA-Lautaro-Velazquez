@@ -14,8 +14,11 @@ Welcome to HomeWorks documentation!
    tp-semanal-2
    tp-semanal-3
    tp-semanal-4
+   tp-semanal5
    guia-1 
+   guia-2
    ds-cuidandonos
+   com-modulacion-lineal
 
 PDF TPS
 ===========
