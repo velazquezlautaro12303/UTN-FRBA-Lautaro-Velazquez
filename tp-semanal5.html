@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -16,9 +16,9 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -54,7 +54,17 @@
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-2.html">TP-Semanal 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-3.html">TP SEMANAL 3 TC II</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-4.html">TP Semanal 4</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">TP Semanal 5</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">TP Semanal 5</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Enunciado">Enunciado</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#CODE">CODE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Manuscritos">Manuscritos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Simulaciones">Simulaciones</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#D(1)-=-1seg">D(1) = 1seg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#D(1)-=-200useg">D(1) = 200useg</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="guia-1.html">GUIA 1 : Medidas Electronicas 1 Utn FRBA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="guia-2.html">GUIA 2 : Medidas Electronicas 1 Utn FRBA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ds-cuidandonos.html">DS TP: Cuidandonos</a></li>
@@ -86,49 +96,80 @@
            <div itemprop="articleBody">
              
   <section id="TP-Semanal-5">
-<h1>TP Semanal 5<a class="headerlink" href="#TP-Semanal-5" title="Permalink to this heading"></a></h1>
+<h1>TP Semanal 5<a class="headerlink" href="#TP-Semanal-5" title="Link to this heading"></a></h1>
+<section id="Enunciado">
+<h2>Enunciado<a class="headerlink" href="#Enunciado" title="Link to this heading"></a></h2>
+<p>Diseñar un filtro pasabajos normalizado Bessel para obtener un Retardo de Grupo D(w) de 1 segundo.</p>
+<p><img alt="9cef498295584dc993b82090dfe8d4bf" src="_images/image43.png" /></p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><div class="math notranslate nohighlight">
+\[D[seg]\]</div>
+</th>
+<th class="head"><div class="math notranslate nohighlight">
+\[\alpha_{Max} [dB]\]</div>
+</th>
+<th class="head"><div class="math notranslate nohighlight">
+\[w_p [\frac{rad}{seg}]\]</div>
+</th>
+<th class="head"><div class="math notranslate nohighlight">
+\[w_s [\frac{rad}{seg}]\]</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>2.5</p></td>
+</tr>
+</tbody>
+</table>
+<p>Utilizando el metodo de Storch ( pag. 403 del Schaumann) obtener la T(s) Bessel para N: 2, 3 y 4 normalizados para D = 1</p>
+<p>Elegir la T(s) con el minimo orden que cumple con ⍺Max = 1 dB</p>
+<p>Evaluar el Retardo de Grupo D(2.5) . Expresar en forma porcentual [%] el error o desviamiento respecto a D(0)</p>
+<p>Sintetizar el circuito NORMALIZADO con estructuras Sallen-Key con K=1 ( real. negativa unitaria )</p>
+<p><img alt="9f5ca2031043410f99757f31fd8fe43f" src="_images/image44.png" /></p>
+</section>
+<section id="CODE">
+<h2>CODE<a class="headerlink" href="#CODE" title="Link to this heading"></a></h2>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> ipympl
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">scipy.signal</span> <span class="k">as</span> <span class="nn">signal</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.signal</span> <span class="k">as</span> <span class="nn">sig</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">pytc2.sistemas_lineales</span> <span class="kn">import</span> <span class="n">tf2sos_analog</span><span class="p">,</span> <span class="n">pretty_print_SOS</span><span class="p">,</span> <span class="n">analyze_sys</span><span class="p">,</span> <span class="n">pretty_print_lti</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Math</span><span class="p">,</span> <span class="n">Markdown</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="c1"># Definir el orden del filtro y la frecuencia de corte</span>
-<span class="n">orden</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">frecuencia_corte</span> <span class="o">=</span> <span class="mf">1.0</span>  <span class="c1"># En radianes/segundo</span>
+<span class="n">OMEGA</span> <span class="o">=</span> <span class="mf">1.0</span>  <span class="c1"># Frecuencia en radianes por segundo</span>
+<span class="n">ALPHA_MAX</span> <span class="o">=</span> <span class="mf">1.0</span>
 
-<span class="c1"># Diseñar el filtro Bessel</span>
-<span class="n">b</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">bessel</span><span class="p">(</span><span class="n">orden</span><span class="p">,</span> <span class="n">frecuencia_corte</span><span class="p">,</span> <span class="n">analog</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">sistemas</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="c1"># Mostrar los coeficientes del numerador (b) y del denominador (a)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Coeficientes del numerador (b):&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Coeficientes del denominador (a):&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;### Transferencias&quot;</span><span class="p">))</span>
 
-<span class="c1"># Crear una función de transferencia</span>
-<span class="n">sistema</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">TransferFunction</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">orden</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]:</span>
 
-<span class="c1"># Mostrar la función de transferencia</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Función de transferencia:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sistema</span><span class="p">)</span>
+    <span class="n">z</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">k</span> <span class="o">=</span> <span class="n">sig</span><span class="o">.</span><span class="n">besselap</span><span class="p">(</span><span class="n">orden</span><span class="p">,</span><span class="s1">&#39;delay&#39;</span><span class="p">)</span>
+    <span class="n">num</span><span class="p">,</span> <span class="n">den</span> <span class="o">=</span> <span class="n">sig</span><span class="o">.</span><span class="n">zpk2tf</span><span class="p">(</span><span class="n">z</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">k</span><span class="p">)</span>
 
-<span class="c1"># Graficar la respuesta en frecuencia</span>
-<span class="n">w</span><span class="p">,</span> <span class="n">mag</span><span class="p">,</span> <span class="n">phase</span> <span class="o">=</span> <span class="n">signal</span><span class="o">.</span><span class="n">bode</span><span class="p">(</span><span class="n">sistema</span><span class="p">)</span>
+    <span class="n">sos_cheb</span> <span class="o">=</span> <span class="n">tf2sos_analog</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">den</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">&quot;## Bessel Orden: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">orden</span><span class="p">)))</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s2">&quot;T(s) = &quot;</span> <span class="o">+</span> <span class="n">pretty_print_lti</span><span class="p">(</span><span class="n">num</span><span class="o">=</span><span class="n">num</span><span class="p">,</span><span class="n">den</span><span class="o">=</span><span class="n">den</span><span class="p">,</span> <span class="n">displaystr</span><span class="o">=</span><span class="kc">False</span><span class="p">)))</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s2">&quot;T(s) = &quot;</span> <span class="o">+</span> <span class="n">pretty_print_SOS</span><span class="p">(</span><span class="n">sos_cheb</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;omegayq&#39;</span><span class="p">,</span> <span class="n">displaystr</span><span class="o">=</span><span class="kc">False</span><span class="p">)))</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">mag</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Respuesta en Frecuencia del Filtro Bessel de Primer Orden&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Magnitud (dB)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+    <span class="n">H</span> <span class="o">=</span> <span class="n">sig</span><span class="o">.</span><span class="n">TransferFunction</span><span class="p">(</span> <span class="n">num</span><span class="p">,</span> <span class="n">den</span> <span class="p">)</span>
+    <span class="n">sistemas</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">H</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">semilogx</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">phase</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia (rad/s)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Fase (grados)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+    <span class="n">w</span><span class="p">,</span> <span class="n">H_jw</span> <span class="o">=</span> <span class="n">sig</span><span class="o">.</span><span class="n">freqresp</span><span class="p">(</span><span class="n">H</span><span class="p">,</span> <span class="p">[</span><span class="n">OMEGA</span><span class="p">])</span>
+
+    <span class="n">ts_alpha_max</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="nb">abs</span><span class="p">(</span><span class="n">H_jw</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+    <span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\alpha_</span><span class="si">{max}</span><span class="s2">(w=1) = </span><span class="si">%0.4f</span><span class="s2"> dB&quot;</span> <span class="o">%</span> <span class="n">ts_alpha_max</span><span class="p">))</span>
+
+<span class="n">analyze_sys</span><span class="p">(</span><span class="n">sistemas</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;n=1&quot;</span><span class="p">,</span><span class="s2">&quot;n=2&quot;</span><span class="p">,</span><span class="s2">&quot;n=3&quot;</span><span class="p">,</span><span class="s2">&quot;n=4&quot;</span><span class="p">])</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <br/></pre></div>
@@ -138,24 +179,192 @@
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-Coeficientes del numerador (b): [1.]
-Coeficientes del denominador (a): [1. 1.]
-
-Función de transferencia:
-TransferFunctionContinuous(
-array([1.]),
-array([1., 1.]),
-dt: None
-)
-</pre></div></div>
+<section id="Transferencias">
+<h3>Transferencias<a class="headerlink" href="#Transferencias" title="Link to this heading"></a></h3>
+</section>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<section id="Bessel-Orden:-1">
+<h3>Bessel Orden: 1<a class="headerlink" href="#Bessel-Orden:-1" title="Link to this heading"></a></h3>
+</section>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="math notranslate nohighlight">
+$\displaystyle T(s) = \frac{  1 }{s +   1 }$</div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="math notranslate nohighlight">
+$\displaystyle T(s) =  \frac{  1 }{s +   1 }$</div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="math notranslate nohighlight">
+$\displaystyle \alpha_{max}(w=1) = 3.0103 dB$</div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<section id="Bessel-Orden:-2">
+<h3>Bessel Orden: 2<a class="headerlink" href="#Bessel-Orden:-2" title="Link to this heading"></a></h3>
+</section>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="math notranslate nohighlight">
+$\displaystyle T(s) = \frac{  3 }{s^2 + s \,\,   3 +   3 }$</div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="math notranslate nohighlight">
+$\displaystyle T(s) =  \frac{  3 }{s^2 + s \frac{1.732}{0.5774} + 1.732^2}$</div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="math notranslate nohighlight">
+$\displaystyle \alpha_{max}(w=1) = 1.5970 dB$</div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<section id="Bessel-Orden:-3">
+<h3>Bessel Orden: 3<a class="headerlink" href="#Bessel-Orden:-3" title="Link to this heading"></a></h3>
+</section>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="math notranslate nohighlight">
+$\displaystyle T(s) = \frac{ 15 }{s^3 + s^2 \,\,   6 + s \,\,  15 +  15 }$</div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="math notranslate nohighlight">
+$\displaystyle T(s) =  \frac{2.322 }{s + 2.322 } . \frac{6.459 }{s^2 + s \frac{2.542}{0.691} + 2.542^2}$</div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="math notranslate nohighlight">
+$\displaystyle \alpha_{max}(w=1) = 0.9030 dB$</div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<section id="Bessel-Orden:-4">
+<h3>Bessel Orden: 4<a class="headerlink" href="#Bessel-Orden:-4" title="Link to this heading"></a></h3>
+</section>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="math notranslate nohighlight">
+$\displaystyle T(s) = \frac{105 }{s^4 + s^3 \,\,  10 + s^2 \,\,  45 + s \,\, 105 + 105 }$</div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="math notranslate nohighlight">
+$\displaystyle T(s) =  \frac{9.14 }{s^2 + s \frac{3.023}{0.5219} + 3.023^2} . \frac{11.49 }{s^2 + s \frac{3.389}{0.8055} + 3.389^2}$</div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="math notranslate nohighlight">
+$\displaystyle \alpha_{max}(w=1) = 0.6300 dB$</div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/tp-semanal5_2_17.png" src="_images/tp-semanal5_2_17.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/tp-semanal5_2_18.png" src="_images/tp-semanal5_2_18.png" />
+</div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<script type="application/vnd.jupyter.widget-view+json">{"model_id": "a047d9f27e4346a4b136be1789745bc6", "version_major": 2, "version_minor": 0}</script></div>
+<img alt="_images/tp-semanal5_2_19.png" src="_images/tp-semanal5_2_19.png" />
 </div>
+</div>
+</section>
+<section id="Manuscritos">
+<h2>Manuscritos<a class="headerlink" href="#Manuscritos" title="Link to this heading"></a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+<span class="n">IFrame</span><span class="p">(</span><span class="s2">&quot;./tp5tc2.pdf&quot;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;100%&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;600&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<iframe
+    width="100%"
+    height="600"
+    src="./tp5tc2.pdf"
+    frameborder="0"
+    allowfullscreen
+
+></iframe></div>
+</div>
+</section>
+<section id="Simulaciones">
+<h2>Simulaciones<a class="headerlink" href="#Simulaciones" title="Link to this heading"></a></h2>
+<section id="D(1)-=-1seg">
+<h3>D(1) = 1seg<a class="headerlink" href="#D(1)-=-1seg" title="Link to this heading"></a></h3>
+<p><img alt="2586fe22c1e8486394e2155c638f5ec2" src="_images/image40.png" /></p>
+<p><img alt="ac5293f6d4044bbca643a74f44d3849e" src="_images/image39.png" /></p>
+</section>
+<section id="D(1)-=-200useg">
+<h3>D(1) = 200useg<a class="headerlink" href="#D(1)-=-200useg" title="Link to this heading"></a></h3>
+<p><img alt="db910239c7a44e5fb81e07711a118c9a" src="_images/image41.png" /></p>
+<p><img alt="edac1a717c2d4d468fb04fb783d5976a" src="_images/image42.png" /></p>
+</section>
+</section>
 </section>
 
 

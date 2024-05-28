@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -16,16 +16,16 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="GUIA 1 : Medidas Electronicas 1 Utn FRBA" href="guia-1.html" />
+    <link rel="next" title="TP Semanal 5" href="tp-semanal5.html" />
     <link rel="prev" title="TP SEMANAL 3 TC II" href="tp-semanal-3.html" /> 
 </head>
 
@@ -50,7 +50,6 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="example.html">TP1 ME1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal.html">TP-Semanal 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-2.html">TP-Semanal 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-3.html">TP SEMANAL 3 TC II</a></li>
@@ -66,8 +65,11 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal5.html">TP Semanal 5</a></li>
 <li class="toctree-l1"><a class="reference internal" href="guia-1.html">GUIA 1 : Medidas Electronicas 1 Utn FRBA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="guia-2.html">GUIA 2 : Medidas Electronicas 1 Utn FRBA</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ds-cuidandonos.html">DS TP: Cuidandonos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="com-modulacion-lineal.html">Modulación Lineal y Multiplexación por División de Frecuencia.</a></li>
 </ul>
 
         </div>
@@ -95,9 +97,9 @@
            <div itemprop="articleBody">
              
   <section id="TP-Semanal-4">
-<h1>TP Semanal 4<a class="headerlink" href="#TP-Semanal-4" title="Permalink to this heading"></a></h1>
+<h1>TP Semanal 4<a class="headerlink" href="#TP-Semanal-4" title="Link to this heading"></a></h1>
 <section id="Enunciado">
-<h2>Enunciado<a class="headerlink" href="#Enunciado" title="Permalink to this heading"></a></h2>
+<h2>Enunciado<a class="headerlink" href="#Enunciado" title="Link to this heading"></a></h2>
 <p>Diseñar un filtro pasabajos Chebyshev para obtener una atenuación de 48 dB para frecuencias mayores a 900 Hz, con una atenuación máxima de 0.4 dB desde continua hasta 300 Hz. ( Ancho de Banda reducido para canal Sub Lows )</p>
 <table class="docutils align-default">
 <thead>
@@ -129,7 +131,7 @@
 <li><p>Obtener el diagrama de polos y ceros y graficar a mano alzada en forma cualitativa la respuesta de modulo y fase.</p></li>
 <li><p>Sintetizar el circuito NORMALIZADO utilizando estructuras Kerwin–Huelsman–Newcomb (KHN, también conocido como Variable de Estado ) saliendo desde la salida V3 como indica el siguiente circuito de referencia:</p></li>
 </ol>
-<p><img alt="1eba232e497d49fcbff8ff5e6785a6fa" src="_images/image26.png" /></p>
+<p><img alt="cafd811b803f4c929d09591660f70155" src="_images/image26.png" /></p>
 <p>BONUS</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>+10 💎 Simulación numérica en python
 +10 💎 Simulación Circuital con los valores DESNORMALIZADOS ( cumpliendo la plantilla pedida )
@@ -138,7 +140,7 @@
 </div>
 </section>
 <section id="Orden-del-Filtro-y-Parametro-\epsilon">
-<h2>Orden del Filtro y Parametro <span class="math notranslate nohighlight">\(\epsilon\)</span><a class="headerlink" href="#Orden-del-Filtro-y-Parametro-\epsilon" title="Permalink to this heading"></a></h2>
+<h2>Orden del Filtro y Parametro <span class="math notranslate nohighlight">\(\epsilon\)</span><a class="headerlink" href="#Orden-del-Filtro-y-Parametro-\epsilon" title="Link to this heading"></a></h2>
 <p>Dada la ecuacion:</p>
 <div class="math notranslate nohighlight">
 \[\epsilon^2 = 10^{\frac{\alpha_{Max}}{10}}-1\]</div>
@@ -149,7 +151,7 @@
 <p>Obtuve n = 5</p>
 </section>
 <section id="Transferencia-Normalizada">
-<h2>Transferencia Normalizada<a class="headerlink" href="#Transferencia-Normalizada" title="Permalink to this heading"></a></h2>
+<h2>Transferencia Normalizada<a class="headerlink" href="#Transferencia-Normalizada" title="Link to this heading"></a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
@@ -205,7 +207,7 @@ $\displaystyle T(s) =  \frac{0.3861 }{s + 0.3861 } . \frac{0.4946 }{s^2 + s \fra
 </div>
 </section>
 <section id="Manuscrito">
-<h2>Manuscrito<a class="headerlink" href="#Manuscrito" title="Permalink to this heading"></a></h2>
+<h2>Manuscrito<a class="headerlink" href="#Manuscrito" title="Link to this heading"></a></h2>
 <p>Se propone hallar la transferencia del circuito propuesto:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -232,17 +234,17 @@ $\displaystyle T(s) =  \frac{0.3861 }{s + 0.3861 } . \frac{0.4946 }{s^2 + s \fra
 </div>
 </section>
 <section id="Simulaciones">
-<h2>Simulaciones<a class="headerlink" href="#Simulaciones" title="Permalink to this heading"></a></h2>
+<h2>Simulaciones<a class="headerlink" href="#Simulaciones" title="Link to this heading"></a></h2>
 <section id="Normalizado">
-<h3>Normalizado<a class="headerlink" href="#Normalizado" title="Permalink to this heading"></a></h3>
-<p><img alt="2bc6c80f74124dce89760c89576601ce" src="_images/image29.png" /></p>
-<p><img alt="4f5cd8513d7d4ea0b1bd49e5b0d47a57" src="_images/image30.png" /></p>
+<h3>Normalizado<a class="headerlink" href="#Normalizado" title="Link to this heading"></a></h3>
+<p><img alt="e58f752d18974814ab750db0f5b12479" src="_images/image29.png" /></p>
+<p><img alt="1ef4fbb502394ce596e0e4d2bea7a59d" src="_images/image30.png" /></p>
 </section>
 <section id="Desnormalizado">
-<h3>Desnormalizado<a class="headerlink" href="#Desnormalizado" title="Permalink to this heading"></a></h3>
+<h3>Desnormalizado<a class="headerlink" href="#Desnormalizado" title="Link to this heading"></a></h3>
 <p>Se propone el siguiente circuito en el cual se aplico desnormalizacion de impedancia y frecuencia:</p>
-<p><img alt="06c563bdff3149f28defad4d80a13ae4" src="_images/image27.png" /></p>
-<p><img alt="a1e3aaeba1184dfd9299efe44dd8fdcd" src="_images/image28.png" /></p>
+<p><img alt="bd538d3b478e404094e6ba722b2fe25b" src="_images/image27.png" /></p>
+<p><img alt="f9a8e2f6604840589149fcf1bfc7718b" src="_images/image28.png" /></p>
 </section>
 </section>
 </section>
@@ -252,7 +254,7 @@ $\displaystyle T(s) =  \frac{0.3861 }{s + 0.3861 } . \frac{0.4946 }{s^2 + s \fra
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="tp-semanal-3.html" class="btn btn-neutral float-left" title="TP SEMANAL 3 TC II" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="guia-1.html" class="btn btn-neutral float-right" title="GUIA 1 : Medidas Electronicas 1 Utn FRBA" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tp-semanal5.html" class="btn btn-neutral float-right" title="TP Semanal 5" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
