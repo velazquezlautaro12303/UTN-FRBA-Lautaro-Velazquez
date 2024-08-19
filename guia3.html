@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio1 &mdash; Tareas UTN FRBA lavelazquez  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/nbsphinx-code-cells.css?v=2aa19091" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tareas UTN FRBA lavelazquez
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal.html">TP-Semanal 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-2.html">TP-Semanal 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-3.html">TP SEMANAL 3 TC II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-4.html">TP Semanal 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal5.html">TP Semanal 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal6.html">TP SEMANAL 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-7.html">TP Semanal 7</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tareas UTN FRBA lavelazquez</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Ejercicio1</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/guia3.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="Ejercicio1">
+<h1>Ejercicio1<a class="headerlink" href="#Ejercicio1" title="Link to this heading"></a></h1>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">sqrt</span>
+
+<span class="n">RANGO</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">ERROR_LECTURA_V1</span> <span class="o">=</span> <span class="mf">.05</span>
+<span class="n">ERROR_DIGITOS_V1</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">Vi1</span> <span class="o">=</span> <span class="mf">.850</span>
+
+<span class="n">ERROR_LECTURA_V2</span> <span class="o">=</span> <span class="mf">.05</span>
+<span class="n">ERROR_DIGITOS_V2</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">Vi2</span> <span class="o">=</span> <span class="mf">.553</span>
+
+<span class="n">ERROR_LECTURA_V3</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">ERROR_DIGITOS_V3</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">Vi3</span> <span class="o">=</span> <span class="mf">.36</span>
+
+<span class="n">delta</span> <span class="o">=</span> <span class="n">Vi2</span> <span class="o">/</span> <span class="p">(</span><span class="n">pi</span> <span class="o">*</span> <span class="n">Vi1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">cuentas</span><span class="p">(</span><span class="n">indicado</span><span class="p">,</span> <span class="n">rango</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">indicado</span> <span class="o">/</span> <span class="n">rango</span> <span class="o">*</span> <span class="mi">1000</span>
+
+<span class="n">u_Vi1_rel</span> <span class="o">=</span> <span class="p">(</span><span class="n">ERROR_LECTURA_V1</span> <span class="o">+</span> <span class="n">ERROR_DIGITOS_V1</span> <span class="o">/</span> <span class="n">cuentas</span><span class="p">(</span><span class="n">Vi1</span><span class="p">,</span> <span class="n">RANGO</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">u_Vi2_rel</span> <span class="o">=</span> <span class="p">(</span><span class="n">ERROR_LECTURA_V2</span> <span class="o">+</span> <span class="n">ERROR_DIGITOS_V2</span> <span class="o">/</span> <span class="n">cuentas</span><span class="p">(</span><span class="n">Vi2</span><span class="p">,</span> <span class="n">RANGO</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">u_c_delta_rel</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">u_Vi1_rel</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">u_Vi2_rel</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">u_c_delta</span> <span class="o">=</span> <span class="n">u_c_delta_rel</span> <span class="o">*</span> <span class="n">delta</span> <span class="o">/</span> <span class="mi">100</span>
+<br/></pre></div>
+</div>
+</div>
+<p>Valor indicado q responde a multimetro valor maximo.</p>
+<div class="math notranslate nohighlight">
+\[S_i=S_{pp}(1-\delta)\frac{1}{\sqrt{2}}\]</div>
+<p>Valor indicado q responde a multimetro valor medio.</p>
+<div class="math notranslate nohighlight">
+\[S_i=S_{pp}(1-\delta)\delta\frac{\pi}{\sqrt{2}}\]</div>
+<p>Valor medio.</p>
+<div class="math notranslate nohighlight">
+\[S_i=S_{m+}\delta-S_{m-}(1-\delta)\]</div>
+<div class="math notranslate nohighlight">
+\[\delta=\frac{S_{i_{|med|}}}{\pi S_{i_{max}}}\]</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;delta = </span><span class="si">%.3f</span><span class="s2"> +- </span><span class="si">%.3f</span><span class="s2"> @ 95</span><span class="si">%%</span><span class="s2"> k = 2&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">delta</span><span class="p">,</span> <span class="n">u_c_delta</span> <span class="o">*</span> <span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+delta = 0.207 +- 0.002 @ 95% k = 2
+</pre></div></div>
+</div>
+</section>
+<section id="Ejercicio2">
+<h1>Ejercicio2<a class="headerlink" href="#Ejercicio2" title="Link to this heading"></a></h1>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Vi_DC</span> <span class="o">=</span> <span class="mf">0.953</span>
+<span class="n">Vi_AC</span> <span class="o">=</span> <span class="mf">1.057</span>
+
+<span class="n">RANGO</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">STD_DC</span> <span class="o">=</span> <span class="mf">1e-2</span>
+<span class="n">STD_AC</span> <span class="o">=</span> <span class="mf">.025</span>
+
+<span class="n">ERROR_LECTURA_DC</span> <span class="o">=</span> <span class="mf">.8</span>
+<span class="n">ERROR_LECTURA_AC</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">ERROR_CUENTAS_DC</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">ERROR_CUENTAS_AC</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="n">CANT_MEDICIONES_AC</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">CANT_MEDICIONES_DC</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="k">def</span> <span class="nf">cuentas</span><span class="p">(</span><span class="n">indicado</span><span class="p">,</span> <span class="n">rango</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">indicado</span> <span class="o">/</span> <span class="n">rango</span> <span class="o">*</span> <span class="mi">1000</span>
+
+<span class="n">Vp_minus</span> <span class="o">=</span> <span class="n">Vi_DC</span> <span class="o">-</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">Vi_AC</span> <span class="o">/</span> <span class="n">pi</span>
+<span class="n">Vp_plus</span>  <span class="o">=</span> <span class="n">Vi_DC</span> <span class="o">+</span> <span class="mi">8</span> <span class="o">*</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">Vi_AC</span> <span class="o">/</span> <span class="n">pi</span>
+
+<span class="n">u_V_AC_A</span> <span class="o">=</span> <span class="n">STD_AC</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">CANT_MEDICIONES_AC</span><span class="p">)</span>
+<span class="n">u_V_DC_A</span> <span class="o">=</span> <span class="n">STD_DC</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">CANT_MEDICIONES_DC</span><span class="p">)</span>
+
+<span class="n">u_V_AC_B</span> <span class="o">=</span> <span class="p">(</span><span class="n">ERROR_LECTURA_AC</span> <span class="o">/</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">Vi_AC</span> <span class="o">+</span> <span class="n">ERROR_CUENTAS_AC</span> <span class="o">/</span> <span class="n">cuentas</span><span class="p">(</span><span class="n">Vi_AC</span><span class="p">,</span> <span class="n">RANGO</span><span class="p">)</span> <span class="o">*</span> <span class="n">Vi_AC</span><span class="p">)</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">u_V_DC_B</span> <span class="o">=</span> <span class="p">(</span><span class="n">ERROR_LECTURA_DC</span> <span class="o">/</span> <span class="mi">100</span> <span class="o">*</span> <span class="n">Vi_DC</span> <span class="o">+</span> <span class="n">ERROR_CUENTAS_DC</span> <span class="o">/</span> <span class="n">cuentas</span><span class="p">(</span><span class="n">Vi_DC</span><span class="p">,</span> <span class="n">RANGO</span><span class="p">)</span> <span class="o">*</span> <span class="n">Vi_DC</span><span class="p">)</span> <span class="o">/</span> <span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="n">u_V_pp</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">u_V_AC_A</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">u_V_AC_B</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">u_V_DC</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">u_V_DC_A</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">u_V_DC_B</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">dVp_dVpp</span> <span class="o">=</span> <span class="mf">.5</span>
+<span class="n">dVp_dVDC</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">u_c_Vp</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">dVp_dVDC</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">u_V_DC</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dVp_dVpp</span><span class="o">**</span><span class="mi">2</span> <span class="o">*</span> <span class="n">u_V_pp</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c1"># V_eff = (u_c_Vp**4) / ((dVp_dVDC * u_V_DC_A)**4 / CANT_MEDICIONES_DC + (dVp_dVpp * u_V_AC_A)**4 / CANT_MEDICIONES_AC)</span>
+<span class="c1"># print (V_eff)</span>
+
+<span class="c1"># V_eff = (u_V_DC**4) / ((u_V_DC_A)**4 / CANT_MEDICIONES_DC)</span>
+<span class="c1"># print (V_eff)</span>
+
+<span class="c1"># V_eff = (u_V_pp**4) / ((u_V_AC_A)**4 / CANT_MEDICIONES_DC)</span>
+<span class="c1"># print (V_eff)</span>
+</pre></div>
+</div>
+</div>
+<div class="math notranslate nohighlight">
+\[S_{i_{AC}}=\frac{V_{pp}}{4}\frac{\pi}{2\sqrt{2}}\]</div>
+<div class="math notranslate nohighlight">
+\[V_{p+}=V_{DC}+\frac{V_{pp}}{2}\]</div>
+<div class="math notranslate nohighlight">
+\[V_{p-}=V_{DC}-\frac{V_{pp}}{2}\]</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print (u_V_DC_A, u_V_DC_B)</span>
+<span class="c1"># print (u_V_AC_A, u_V_AC_B)</span>
+<span class="c1"># print (Vp_plus, u_c_Vp)</span>
+<span class="c1"># print (Vp_minus, u_c_Vp)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">Vp_minus</span><span class="p">,</span> <span class="n">u_c_Vp</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">Vp_plus</span><span class="p">,</span> <span class="n">u_c_Vp</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+-2.853537384712245 0.02639440852402897
+4.759537384712245 0.02639440852402897
+</pre></div></div>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, lavelazquez.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
