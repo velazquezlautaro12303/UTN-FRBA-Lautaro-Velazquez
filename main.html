@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trabajo Práctico de Laboratorio 1 &mdash; Tareas UTN FRBA lavelazquez  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/nbsphinx-code-cells.css?v=2aa19091" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Tareas UTN FRBA lavelazquez
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal.html">TP-Semanal 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-2.html">TP-Semanal 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-3.html">TP SEMANAL 3 TC II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-4.html">TP Semanal 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal5.html">TP Semanal 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal6.html">TP SEMANAL 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-7.html">TP Semanal 7</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Tareas UTN FRBA lavelazquez</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Trabajo Práctico de Laboratorio 1</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/main.ipynb.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="Trabajo-Práctico-de-Laboratorio-1">
+<h1>Trabajo Práctico de Laboratorio 1<a class="headerlink" href="#Trabajo-Práctico-de-Laboratorio-1" title="Link to this heading"></a></h1>
+<p><img alt="6fa39c68325c4ed4816de783bcf2d556" class="no-scaled-link" src="_images/logo_UTN.svg" width="150" /></p>
+<p>Teoría Moderna y Filtrado Activo</p>
+<p>Autor Velazquez Lautaro</p>
+<section id="Descripción">
+<h2>Descripción<a class="headerlink" href="#Descripción" title="Link to this heading"></a></h2>
+<p>El trabajo práctico consiste en el diseño, análisis, medición y discusión de un filtro activo.</p>
+<p>Como principal elemento se utilizará el circuito integrado UAF42 que posee una característica especial, capacitores integrados de muy baja tolerancia, aproximadamente del 1%, disminuyendo la incertidumbre de los valores permitiendo obtener respuestas en frecuencia del filtro muy parecidas a las simulaciones.</p>
+</section>
+<section id="UAF42">
+<h2>UAF42<a class="headerlink" href="#UAF42" title="Link to this heading"></a></h2>
+<p><img alt="6eda64c1e87c4fa5a4df5477dbcdb81d" src="_images/image73.png" /></p>
+</section>
+<section id="Plantilla">
+<h2>Plantilla<a class="headerlink" href="#Plantilla" title="Link to this heading"></a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Crear un diccionario con los datos</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Filtro&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Función de aproximación&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Chebyshev&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Frecuencia de corte&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;1.5 kHz&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Frecuencia de stop&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;4.5 kHz&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Atenuación máxima en banda de paso&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;0.5 dB&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Atenuación mínima en banda de stop&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;16 dB&#39;</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="c1"># Crear el DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Mostrar el DataFrame</span>
+<span class="n">df</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Filtro</th>
+      <th>Función de aproximación</th>
+      <th>Frecuencia de corte</th>
+      <th>Frecuencia de stop</th>
+      <th>Atenuación máxima en banda de paso</th>
+      <th>Atenuación mínima en banda de stop</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>Chebyshev</td>
+      <td>1.5 kHz</td>
+      <td>4.5 kHz</td>
+      <td>0.5 dB</td>
+      <td>16 dB</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+<section id="Desarrollo">
+<h2>Desarrollo<a class="headerlink" href="#Desarrollo" title="Link to this heading"></a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sp</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">scipy.signal</span> <span class="k">as</span> <span class="nn">sig</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="kn">from</span> <span class="nn">pytc2.sistemas_lineales</span> <span class="kn">import</span> <span class="n">tf2sos_analog</span><span class="p">,</span> <span class="n">pretty_print_SOS</span><span class="p">,</span> <span class="n">analyze_sys</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Math</span>
+
+<span class="n">aprox_name</span>  <span class="o">=</span> <span class="s1">&#39;cheby1&#39;</span>
+<span class="n">filter_type</span> <span class="o">=</span> <span class="s1">&#39;lowpass&#39;</span>
+<span class="n">fpass</span>       <span class="o">=</span> <span class="mi">1500</span> <span class="c1">#</span>
+<span class="n">ripple</span>      <span class="o">=</span> <span class="mf">0.5</span>  <span class="c1"># dB</span>
+<span class="n">fstop</span>       <span class="o">=</span> <span class="mi">4500</span> <span class="c1"># Hz</span>
+<span class="n">attenuation</span> <span class="o">=</span> <span class="mi">16</span>   <span class="c1"># dB</span>
+
+<span class="n">num</span><span class="p">,</span> <span class="n">den</span> <span class="o">=</span> <span class="n">sig</span><span class="o">.</span><span class="n">iirdesign</span><span class="p">(</span><span class="n">wp</span> <span class="o">=</span> <span class="n">fpass</span> <span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span>
+                         <span class="n">ws</span> <span class="o">=</span> <span class="n">fstop</span> <span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span>
+                         <span class="n">gpass</span> <span class="o">=</span> <span class="n">ripple</span><span class="p">,</span>
+                         <span class="n">gstop</span> <span class="o">=</span> <span class="n">attenuation</span><span class="p">,</span>
+                         <span class="n">ftype</span><span class="o">=</span><span class="n">aprox_name</span><span class="p">,</span>
+                         <span class="n">output</span> <span class="o">=</span> <span class="s1">&#39;ba&#39;</span><span class="p">,</span>
+                         <span class="n">analog</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+
+<span class="n">sos_cheb</span> <span class="o">=</span> <span class="n">tf2sos_analog</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">den</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Math</span><span class="p">(</span><span class="s2">&quot;T(s) = &quot;</span> <span class="o">+</span> <span class="n">pretty_print_SOS</span><span class="p">(</span><span class="n">sos_cheb</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;omegayq&#39;</span><span class="p">,</span> <span class="n">displaystr</span><span class="o">=</span><span class="kc">False</span><span class="p">)))</span>
+
+<span class="n">H1</span> <span class="o">=</span> <span class="n">sig</span><span class="o">.</span><span class="n">TransferFunction</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">den</span><span class="p">)</span>
+<span class="n">analyze_sys</span><span class="p">(</span><span class="n">H1</span><span class="p">,</span> <span class="s2">&quot;Chevy&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="math notranslate nohighlight">
+$\displaystyle T(s) =  \frac{5904 }{s + 5904 } . \frac{1.015e+08 }{s^2 + s \frac{1.007e+04}{1.706} + 1.007e+04^2}$</div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/main_3_1.png" src="_images/main_3_1.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/main_3_2.png" src="_images/main_3_2.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/main_3_3.png" src="_images/main_3_3.png" />
+</div>
+</div>
+</section>
+<section id="Simulacion">
+<h2>Simulacion<a class="headerlink" href="#Simulacion" title="Link to this heading"></a></h2>
+<p><img alt="2eb82fb72cd14ef4a1ea354effa8d9a6" src="_images/image69.png" /></p>
+<p><img alt="74bbfc8bffc24e6a86ec38c9655e4a3f" src="_images/image70.png" /></p>
+</section>
+<section id="Diseño">
+<h2>Diseño<a class="headerlink" href="#Diseño" title="Link to this heading"></a></h2>
+<section id="Esquematico-KICAD">
+<h3>Esquematico KICAD<a class="headerlink" href="#Esquematico-KICAD" title="Link to this heading"></a></h3>
+<p><img alt="1ec0dce5bf3743d89942fc13f74896c5" src="_images/image71.jpeg" /></p>
+</section>
+<section id="PCB-KICAD">
+<h3>PCB KICAD<a class="headerlink" href="#PCB-KICAD" title="Link to this heading"></a></h3>
+<p><img alt="5ea697d7a1bc48338a2ff7114ead849e" src="_images/image72.jpeg" /></p>
+</section>
+</section>
+<section id="Mediciones">
+<h2>Mediciones<a class="headerlink" href="#Mediciones" title="Link to this heading"></a></h2>
+<section id="Imagenes-de-la-medicion-realizada-en-el-Laboratorio">
+<h3>Imagenes de la medicion realizada en el Laboratorio<a class="headerlink" href="#Imagenes-de-la-medicion-realizada-en-el-Laboratorio" title="Link to this heading"></a></h3>
+<p><img alt="b851bceabc9843ba94e686160a622660" src="_images/image75.jpeg" /></p>
+<p><img alt="5a10509157484c36b67d9e692a03ed08" src="_images/image76.jpeg" /></p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Cargar el archivo .xlsx</span>
+
+<span class="n">df</span>  <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;RELOZMOD.xlsx&#39;</span><span class="p">)</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;RELOZFASE.xlsx&#39;</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">35</span><span class="p">]</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">35</span><span class="p">]</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;w [rad/s]&#39;</span><span class="p">]</span>  <span class="o">=</span>  <span class="n">df</span><span class="p">[</span><span class="s1">&#39;X (Hz)&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="n">df2</span><span class="p">[</span><span class="s1">&#39;w [rad/s]&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df2</span><span class="p">[</span><span class="s1">&#39;X (Hz)&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;w [rad/s]&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Ch-1 (dBr)&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Modulo&#39;</span><span class="p">)</span>
+<span class="n">df2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;w [rad/s]&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Ch-1 (deg)&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Phase&#39;</span><span class="p">)</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;Axes: xlabel=&#39;w [rad/s]&#39;&gt;
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/main_6_1.png" src="_images/main_6_1.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/main_6_2.png" src="_images/main_6_2.png" />
+</div>
+</div>
+</section>
+<section id="Esquema-de-Conexion">
+<h3>Esquema de Conexion<a class="headerlink" href="#Esquema-de-Conexion" title="Link to this heading"></a></h3>
+<p><img alt="1a75dccc834e438fa5e207596d9f9248" src="_images/image74.png" /></p>
+<p>Con el osciloscopio sacamos varias frecuencias de prueba, sus respectiva ganancia y retardos con cruce por cero o diferencia de tiempo entre los picos, y luego graficamos los resultados en escala logaritmica.</p>
+<section id="Valores-Medidos">
+<h4>Valores Medidos<a class="headerlink" href="#Valores-Medidos" title="Link to this heading"></a></h4>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">npoints</span> <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="c1"># Cargar el archivo .xlsx</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s1">&#39;medicion.xlsx&#39;</span><span class="p">)</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Ganancia&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;OUT&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;IN&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Av[dB]&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Ganancia&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Desfasaje[grados] - 180&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Delta T&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">360</span> <span class="o">*</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;frecuencia&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="mi">180</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;w [rad/s]&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;frecuencia&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;w [rad/s]&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Av[dB]&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Medido&#39;</span><span class="p">)</span>
+
+<span class="c1"># Agregar títulos y etiquetas si es necesario</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Ganancia [dB]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;w[rad/s]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Av[dB]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+
+
+<span class="n">w</span><span class="p">,</span> <span class="n">mag</span><span class="p">,</span> <span class="n">phase</span> <span class="o">=</span> <span class="n">sig</span><span class="o">.</span><span class="n">bode</span><span class="p">(</span><span class="n">H1</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;w [rad/s]&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">mag</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Calculado&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;w [rad/s]&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s1">&#39;Desfasaje[grados] - 180&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Medido&#39;</span><span class="p">)</span>
+
+<span class="c1"># Agregar títulos y etiquetas si es necesario</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Phase [grados] vs w[rad/s]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;w[rad/s]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Phase [grados]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">phase</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Calculado&quot;</span><span class="p">)</span>
+
+<span class="c1"># Mostrar el gráfico</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># Mostrar el DataFrame</span>
+<span class="n">df</span>
+<br/></pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&lt;Figure size 640x480 with 0 Axes&gt;
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/main_8_1.png" src="_images/main_8_1.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/main_8_2.png" src="_images/main_8_2.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>frecuencia</th>
+      <th>IN</th>
+      <th>OUT</th>
+      <th>Delta T</th>
+      <th>Ganancia</th>
+      <th>Av[dB]</th>
+      <th>Desfasaje[grados] - 180</th>
+      <th>w [rad/s]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>10</td>
+      <td>18.7</td>
+      <td>18.700</td>
+      <td>0.050000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>0.0000</td>
+      <td>62.831853</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>50</td>
+      <td>20.6</td>
+      <td>20.300</td>
+      <td>0.009800</td>
+      <td>0.985437</td>
+      <td>-0.127424</td>
+      <td>-3.6000</td>
+      <td>314.159265</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>100</td>
+      <td>20.6</td>
+      <td>20.300</td>
+      <td>0.004900</td>
+      <td>0.985437</td>
+      <td>-0.127424</td>
+      <td>-3.6000</td>
+      <td>628.318531</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>200</td>
+      <td>20.2</td>
+      <td>20.000</td>
+      <td>0.002340</td>
+      <td>0.990099</td>
+      <td>-0.086427</td>
+      <td>-11.5200</td>
+      <td>1256.637061</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>400</td>
+      <td>20.2</td>
+      <td>19.600</td>
+      <td>0.001000</td>
+      <td>0.970297</td>
+      <td>-0.261906</td>
+      <td>-36.0000</td>
+      <td>2513.274123</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>500</td>
+      <td>20.2</td>
+      <td>19.600</td>
+      <td>0.000800</td>
+      <td>0.970297</td>
+      <td>-0.261906</td>
+      <td>-36.0000</td>
+      <td>3141.592654</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>600</td>
+      <td>20.2</td>
+      <td>19.600</td>
+      <td>0.000640</td>
+      <td>0.970297</td>
+      <td>-0.261906</td>
+      <td>-41.7600</td>
+      <td>3769.911184</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1000</td>
+      <td>20.0</td>
+      <td>20.000</td>
+      <td>0.000300</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>-72.0000</td>
+      <td>6283.185307</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1200</td>
+      <td>20.0</td>
+      <td>19.200</td>
+      <td>0.000194</td>
+      <td>0.960000</td>
+      <td>-0.354575</td>
+      <td>-96.1920</td>
+      <td>7539.822369</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1400</td>
+      <td>20.0</td>
+      <td>17.700</td>
+      <td>0.000122</td>
+      <td>0.885000</td>
+      <td>-1.061135</td>
+      <td>-118.5120</td>
+      <td>8796.459430</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>1500</td>
+      <td>20.0</td>
+      <td>17.000</td>
+      <td>0.000084</td>
+      <td>0.850000</td>
+      <td>-1.411621</td>
+      <td>-134.6400</td>
+      <td>9424.777961</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>1600</td>
+      <td>20.0</td>
+      <td>16.200</td>
+      <td>0.000054</td>
+      <td>0.810000</td>
+      <td>-1.830300</td>
+      <td>-148.8960</td>
+      <td>10053.096491</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>1700</td>
+      <td>20.0</td>
+      <td>15.000</td>
+      <td>0.000007</td>
+      <td>0.750000</td>
+      <td>-2.498775</td>
+      <td>-175.7160</td>
+      <td>10681.415022</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>2000</td>
+      <td>20.0</td>
+      <td>9.600</td>
+      <td>-0.000019</td>
+      <td>0.480000</td>
+      <td>-6.375175</td>
+      <td>-193.5360</td>
+      <td>12566.370614</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>2300</td>
+      <td>20.0</td>
+      <td>6.230</td>
+      <td>-0.000032</td>
+      <td>0.311500</td>
+      <td>-10.130839</td>
+      <td>-206.1648</td>
+      <td>14451.326207</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>2500</td>
+      <td>20.0</td>
+      <td>4.960</td>
+      <td>-0.000034</td>
+      <td>0.248000</td>
+      <td>-12.110966</td>
+      <td>-210.9600</td>
+      <td>15707.963268</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>3000</td>
+      <td>20.0</td>
+      <td>2.720</td>
+      <td>-0.000041</td>
+      <td>0.136000</td>
+      <td>-17.329222</td>
+      <td>-224.4960</td>
+      <td>18849.555922</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>3500</td>
+      <td>20.0</td>
+      <td>1.750</td>
+      <td>-0.000041</td>
+      <td>0.087500</td>
+      <td>-21.159839</td>
+      <td>-231.4080</td>
+      <td>21991.148575</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>4000</td>
+      <td>20.0</td>
+      <td>1.100</td>
+      <td>-0.000040</td>
+      <td>0.055000</td>
+      <td>-25.192746</td>
+      <td>-238.1760</td>
+      <td>25132.741229</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>4200</td>
+      <td>20.0</td>
+      <td>0.940</td>
+      <td>-0.000040</td>
+      <td>0.047000</td>
+      <td>-26.558043</td>
+      <td>-239.8752</td>
+      <td>26389.378290</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>4500</td>
+      <td>20.0</td>
+      <td>0.760</td>
+      <td>-0.000038</td>
+      <td>0.038000</td>
+      <td>-28.404328</td>
+      <td>-240.9120</td>
+      <td>28274.333882</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>4700</td>
+      <td>20.0</td>
+      <td>0.680</td>
+      <td>-0.000037</td>
+      <td>0.034000</td>
+      <td>-29.370422</td>
+      <td>-242.6040</td>
+      <td>29530.970944</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>5000</td>
+      <td>20.0</td>
+      <td>0.560</td>
+      <td>-0.000036</td>
+      <td>0.028000</td>
+      <td>-31.056839</td>
+      <td>-244.4400</td>
+      <td>31415.926536</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>5500</td>
+      <td>20.0</td>
+      <td>0.440</td>
+      <td>-0.000034</td>
+      <td>0.022000</td>
+      <td>-33.151546</td>
+      <td>-246.5280</td>
+      <td>34557.519189</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>6000</td>
+      <td>20.0</td>
+      <td>0.320</td>
+      <td>-0.000032</td>
+      <td>0.016000</td>
+      <td>-35.917600</td>
+      <td>-249.1200</td>
+      <td>37699.111843</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>8000</td>
+      <td>20.0</td>
+      <td>0.136</td>
+      <td>-0.000027</td>
+      <td>0.006800</td>
+      <td>-43.349822</td>
+      <td>-258.3360</td>
+      <td>50265.482457</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>10000</td>
+      <td>20.0</td>
+      <td>0.070</td>
+      <td>-0.000024</td>
+      <td>0.003500</td>
+      <td>-49.118639</td>
+      <td>-266.4000</td>
+      <td>62831.853072</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+</section>
+</section>
+</section>
+<section id="Conclusiones-y-Reflexiones">
+<h2>Conclusiones y Reflexiones<a class="headerlink" href="#Conclusiones-y-Reflexiones" title="Link to this heading"></a></h2>
+<p>El diseño y la implementación del filtro pasabajos Chebyshev se realizaron con precisión, logrando una atenuación eficiente de las frecuencias superiores a la frecuencia de corte especificada, mientras se mantiene una respuesta en frecuencia adecuada dentro de la banda de paso. Aunque las atenuaciones medidas no coincidieron exactamente con las esperadas teóricamente, los resultados obtenidos están dentro de un rango aceptable y se aproximan a las especificaciones de diseño. Las pruebas
+confirmaron que el filtro opera según las características esperadas, con desviaciones menores atribuibles a las tolerancias de los componentes y las variaciones en la construcción. Se observa que a frecuencias mayores hay mayor desviacion a la curva simulada esperada.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, lavelazquez.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
