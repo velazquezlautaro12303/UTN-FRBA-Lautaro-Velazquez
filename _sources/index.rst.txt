@@ -25,3 +25,4 @@ PDF TPS
 .. raw:: html
 
    <a href="Informe.pdf" download>Informe rediseño de Amplificador Clase D</a>
+   <a href="CV.pdf" download>CV</a>
