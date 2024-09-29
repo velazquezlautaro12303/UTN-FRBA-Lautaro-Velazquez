@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" data-content_root="./">
+<html class="writer-html5" lang="en">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -16,9 +16,9 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -93,9 +93,9 @@
            <div itemprop="articleBody">
              
   <section id="TP-SEMANAL-6">
-<h1>TP SEMANAL 6<a class="headerlink" href="#TP-SEMANAL-6" title="Link to this heading"></a></h1>
+<h1>TP SEMANAL 6<a class="headerlink" href="#TP-SEMANAL-6" title="Permalink to this heading"></a></h1>
 <section id="Consigna">
-<h2>Consigna<a class="headerlink" href="#Consigna" title="Link to this heading"></a></h2>
+<h2>Consigna<a class="headerlink" href="#Consigna" title="Permalink to this heading"></a></h2>
 <p>Se pide diseñar un filtro pasabanda que cumpla con la siguiente plantilla:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(w_0=2\pi.22kHz\)</span></p></li>
@@ -107,14 +107,14 @@
 <li><p>|<span class="math notranslate nohighlight">\(T(f_{s1})\)</span>|=-16dB para <span class="math notranslate nohighlight">\(f_{s1}\)</span>=17kHz</p></li>
 <li><p>|<span class="math notranslate nohighlight">\(T(f_{s2})\)</span>|=-24dB para <span class="math notranslate nohighlight">\(f_{s2}\)</span>=36kHz</p></li>
 </ul>
-<p><img alt="6049deb08aaf4780a16eee35da4ef02d" src="_images/image45.png" /></p>
+<p><img alt="16d84d0f08b24033a2199eb327899227" src="_images/image45.png" /></p>
 <p>Consignas de la actividad:</p>
 <p>👉 Obtener la plantilla de diseño pasabanda normalizada</p>
 <p>👉 Obtener la función transferencia normalizada del prototipo pasabajo que satisfaga el requerimiento del filtro pasabanda.</p>
 <p>👉 Obtener la transferencia pasabanda normalizada</p>
 <p>👉 Implementar mediante secciones pasivas separadas por seguidores de tensión activos.</p>
 <p>👉 Activar las redes pasivas mediante la red propuesta aquí debajo y comprobar mediante simulación el comportamiento deseado.</p>
-<p><img alt="75585b5eaeb9477dafad7710610b7dbb" src="_images/image46.png" /></p>
+<p><img alt="d0bf7c3f8f5e453793678aad44751dd3" src="_images/image46.png" /></p>
 <p>Informe</p>
 <p>Respecto al informe, se mantiene el mismo formato usado hasta el momento, informe en jupyter-notebook, simulaciones en python y LTspice. Se mantienen las recomendaciones para la inclusión de gráficas y resultados de la simulación, y se agrega:</p>
 <ul class="simple">
@@ -129,8 +129,8 @@
 </ul>
 </section>
 <section id="Manuscrito">
-<h2>Manuscrito<a class="headerlink" href="#Manuscrito" title="Link to this heading"></a></h2>
-<p><img alt="a0363e1050584d0082a6ac5ea5008fe0" src="_images/image55.jpg" /></p>
+<h2>Manuscrito<a class="headerlink" href="#Manuscrito" title="Permalink to this heading"></a></h2>
+<p><img alt="e14bae4a042a4eea8ed0f946b18e8e4c" src="_images/image55.jpg" /></p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -248,20 +248,20 @@ $\displaystyle T_{bp}(s) = \frac{s^3 \,\, 0.005728 }{s^6 + s^5 \,\, 0.2506 + s^4
 </div>
 </section>
 <section id="Simulaciones">
-<h2>Simulaciones<a class="headerlink" href="#Simulaciones" title="Link to this heading"></a></h2>
+<h2>Simulaciones<a class="headerlink" href="#Simulaciones" title="Permalink to this heading"></a></h2>
 <section id="Circuito-RLC-PasaBanda">
-<h3>Circuito RLC PasaBanda<a class="headerlink" href="#Circuito-RLC-PasaBanda" title="Link to this heading"></a></h3>
-<p><img alt="fc3025b101c14a78b81245ad6abbb997" src="_images/image47.png" /></p>
-<p><img alt="4923c3cb37b943bfbc258fff46f1fb8e" src="_images/image48.png" /></p>
-<p><img alt="607e211ef2f64be8a0b113233a9a834d" src="_images/image49.png" /></p>
-<p><img alt="3854e3cd4ae5483797b781c0ce1b185f" src="_images/image50.png" /></p>
+<h3>Circuito RLC PasaBanda<a class="headerlink" href="#Circuito-RLC-PasaBanda" title="Permalink to this heading"></a></h3>
+<p><img alt="a09d86b957434f82a17c788255e3829a" src="_images/image47.png" /></p>
+<p><img alt="ac47955e95a04e7ea765d62060b2cf64" src="_images/image48.png" /></p>
+<p><img alt="3993f287a0614e99bfd4b5d8a208ecfb" src="_images/image49.png" /></p>
+<p><img alt="b3b6caa211fb485fa57e88f181f87aef" src="_images/image50.png" /></p>
 </section>
 <section id="Circuito-Pasabanda-con-Activos">
-<h3>Circuito Pasabanda con Activos<a class="headerlink" href="#Circuito-Pasabanda-con-Activos" title="Link to this heading"></a></h3>
-<p><img alt="3ca98ee288c14606b8091c2a0d23c223" src="_images/image51.png" /></p>
-<p><img alt="c0a0e388d8a5453cb6011b40aa1bb1d2" src="_images/image52.png" /></p>
-<p><img alt="3efb6778aa874553b3a190f3a1545cde" src="_images/image53.png" /></p>
-<p><img alt="11cfbcc248784aac9dd8fb72e92f5148" src="_images/image54.png" /></p>
+<h3>Circuito Pasabanda con Activos<a class="headerlink" href="#Circuito-Pasabanda-con-Activos" title="Permalink to this heading"></a></h3>
+<p><img alt="1f004477677d41c39e139be6fc6be9e5" src="_images/image51.png" /></p>
+<p><img alt="b2bc51552b4947fba0596c294c50de1b" src="_images/image52.png" /></p>
+<p><img alt="03c7912e31b644e7b9b67627dfd2292e" src="_images/image53.png" /></p>
+<p><img alt="a1e1f31892e64bcd8d41c7a144b241db" src="_images/image54.png" /></p>
 </section>
 </section>
 </section>
