@@ -24,7 +24,9 @@
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Trabajo semanal 10 - Funciones de excitación no disipativas" href="tp-semanal-10.html" />
+    <link rel="prev" title="TP Semanal 7" href="tp-semanal-7.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,7 +49,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal.html">TP-Semanal 1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-2.html">TP-Semanal 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-3.html">TP SEMANAL 3 TC II</a></li>
@@ -55,6 +57,16 @@
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal5.html">TP Semanal 5</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal6.html">TP SEMANAL 6</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-7.html">TP Semanal 7</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Simulaciones</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Promediador">Promediador</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Verificacion-de-diferenciador-de-segundo-orden">Verificacion de diferenciador de segundo orden</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Integrador-con-pérdidas">Integrador con pérdidas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Filtro-elimina-continua.">Filtro elimina continua.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Filtro-ecualizador-de-fase-de-1º-orden.">Filtro ecualizador de fase de 1º orden.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Ej2a)">Ej2a)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Ej2b)">Ej2b)</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-10.html">Trabajo semanal 10 - Funciones de excitación no disipativas</a></li>
 </ul>
 
@@ -85,12 +97,12 @@
   <section id="Simulaciones">
 <h1>Simulaciones<a class="headerlink" href="#Simulaciones" title="Link to this heading"></a></h1>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[379]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[591]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">freqz</span><span class="p">,</span> <span class="n">lfilter</span><span class="p">,</span> <span class="n">group_delay</span>
+<span class="kn">from</span> <span class="nn">scipy.signal</span> <span class="kn">import</span> <span class="n">freqz</span><span class="p">,</span> <span class="n">lfilter</span><span class="p">,</span> <span class="n">group_delay</span><span class="p">,</span> <span class="n">tf2zpk</span>
 
 <span class="k">def</span> <span class="nf">plot_filter_digital</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">fs</span><span class="p">):</span>
     <span class="c1"># Frecuencia de respuesta (para ver el módulo y fase del filtro)</span>
@@ -152,17 +164,41 @@
     <span class="c1"># plt.legend()</span>
 
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">zplane</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Plot the complex z-plane given a transfer function &quot;&quot;&quot;</span>
+    <span class="c1"># Compute zeros and poles</span>
+    <span class="n">zeros</span><span class="p">,</span> <span class="n">poles</span><span class="p">,</span> <span class="n">gain</span> <span class="o">=</span> <span class="n">tf2zpk</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+
+    <span class="c1"># Plot unit circle</span>
+    <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">unit_circle</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">1</span><span class="n">j</span><span class="o">*</span><span class="n">theta</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">unit_circle</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">unit_circle</span><span class="p">),</span> <span class="s1">&#39;b--&#39;</span><span class="p">)</span>  <span class="c1"># Unit circle</span>
+
+    <span class="c1"># Plot zeros and poles</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">zeros</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">zeros</span><span class="p">),</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">facecolors</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Zeros&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">poles</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">imag</span><span class="p">(</span><span class="n">poles</span><span class="p">),</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">facecolors</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span> <span class="n">edgecolors</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Poles&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Real&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Imaginary&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Poles and Zeros&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[380]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[592]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parámetros de la señal senoidal</span>
 <span class="n">fs</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="c1"># frecuencia = 50/fs  # Frecuencia de la señal en Hz</span>
-<span class="n">frecuencia</span> <span class="o">=</span> <span class="mi">350</span>
+<span class="n">frecuencia</span> <span class="o">=</span> <span class="mi">50</span>
 <span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">.1</span><span class="p">,</span> <span class="mi">1</span><span class="o">/</span><span class="n">fs</span><span class="p">)</span>  <span class="c1"># Vector de tiempo de 1 segundo</span>
 <span class="n">amplitud</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># Amplitud de la señal</span>
 <span class="n">fase</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Fase inicial en radianes</span>
@@ -173,8 +209,10 @@
 </pre></div>
 </div>
 </div>
+<section id="Promediador">
+<h2>Promediador<a class="headerlink" href="#Promediador" title="Link to this heading"></a></h2>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[381]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[603]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
@@ -182,32 +220,34 @@
 
 <span class="n">plot_filter_digital</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
 <span class="n">plot_filter_signal</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">senoidal</span><span class="p">)</span>
-</pre></div>
+
+<span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">senoidal</span><span class="p">)</span>
+<br/></pre></div>
 </div>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/tp-semanal8_3_0.png" src="_images/tp-semanal8_3_0.png" />
+<img alt="_images/tp-semanal8_4_0.png" src="_images/tp-semanal8_4_0.png" />
 </div>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/tp-semanal8_3_1.png" src="_images/tp-semanal8_3_1.png" />
+<img alt="_images/tp-semanal8_4_1.png" src="_images/tp-semanal8_4_1.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/tp-semanal8_3_2.png" src="_images/tp-semanal8_3_2.png" />
+<img alt="_images/tp-semanal8_4_2.png" src="_images/tp-semanal8_4_2.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[382]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[594]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -223,7 +263,11 @@
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/tmp/ipykernel_10988/4043758896.py:27: UserWarning: The group delay is singular at frequencies [0.000], setting to 0
+/home/xxx/.local/lib/python3.10/site-packages/scipy/signal/_filter_design.py:693: RuntimeWarning: divide by zero encountered in divide
+  gd = np.real(num / den) - a.size + 1
+/home/xxx/.local/lib/python3.10/site-packages/scipy/signal/_filter_design.py:693: RuntimeWarning: invalid value encountered in divide
+  gd = np.real(num / den) - a.size + 1
+/tmp/ipykernel_10988/1324583376.py:27: UserWarning: The group delay is singular at frequencies [0.000], setting to 0
   w, gd = group_delay((b, a), fs=fs)
 </pre></div></div>
 </div>
@@ -231,28 +275,28 @@
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/tp-semanal8_4_1.png" src="_images/tp-semanal8_4_1.png" />
+<img alt="_images/tp-semanal8_5_1.png" src="_images/tp-semanal8_5_1.png" />
 </div>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/tp-semanal8_4_2.png" src="_images/tp-semanal8_4_2.png" />
+<img alt="_images/tp-semanal8_5_2.png" src="_images/tp-semanal8_5_2.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/tp-semanal8_4_3.png" src="_images/tp-semanal8_4_3.png" />
+<img alt="_images/tp-semanal8_5_3.png" src="_images/tp-semanal8_5_3.png" />
 </div>
 </div>
 </section>
 <section id="Verificacion-de-diferenciador-de-segundo-orden">
-<h1>Verificacion de diferenciador de segundo orden<a class="headerlink" href="#Verificacion-de-diferenciador-de-segundo-orden" title="Link to this heading"></a></h1>
+<h2>Verificacion de diferenciador de segundo orden<a class="headerlink" href="#Verificacion-de-diferenciador-de-segundo-orden" title="Link to this heading"></a></h2>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[383]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[595]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -268,49 +312,9 @@
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-/tmp/ipykernel_10988/4043758896.py:27: UserWarning: The group delay is singular at frequencies [0.000], setting to 0
+/tmp/ipykernel_10988/1324583376.py:27: UserWarning: The group delay is singular at frequencies [0.000], setting to 0
   w, gd = group_delay((b, a), fs=fs)
 </pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="_images/tp-semanal8_6_1.png" src="_images/tp-semanal8_6_1.png" />
-</div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="_images/tp-semanal8_6_2.png" src="_images/tp-semanal8_6_2.png" />
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="_images/tp-semanal8_6_3.png" src="_images/tp-semanal8_6_3.png" />
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[384]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">.9</span><span class="p">]</span>
-<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">.1</span><span class="p">]</span>
-
-<span class="n">plot_filter_digital</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
-<span class="n">plot_filter_signal</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">senoidal</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="_images/tp-semanal8_7_0.png" src="_images/tp-semanal8_7_0.png" />
-</div>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
@@ -319,66 +323,29 @@
 <img alt="_images/tp-semanal8_7_1.png" src="_images/tp-semanal8_7_1.png" />
 </div>
 </div>
-<div class="nboutput nblast docutils container">
+<div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
 <img alt="_images/tp-semanal8_7_2.png" src="_images/tp-semanal8_7_2.png" />
 </div>
 </div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[385]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DC</span> <span class="o">=</span> <span class="mi">1</span>
-
-<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mf">.9</span><span class="p">]</span>
-
-<span class="n">plot_filter_digital</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
-<span class="n">plot_filter_signal</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">senoidal</span> <span class="o">+</span> <span class="n">DC</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
-/tmp/ipykernel_10988/4043758896.py:27: UserWarning: The group delay is singular at frequencies [0.000], setting to 0
-  w, gd = group_delay((b, a), fs=fs)
-</pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="_images/tp-semanal8_8_1.png" src="_images/tp-semanal8_8_1.png" />
-</div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="_images/tp-semanal8_8_2.png" src="_images/tp-semanal8_8_2.png" />
-</div>
-</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/tp-semanal8_8_3.png" src="_images/tp-semanal8_8_3.png" />
+<img alt="_images/tp-semanal8_7_3.png" src="_images/tp-semanal8_7_3.png" />
 </div>
 </div>
+</section>
+<section id="Integrador-con-pérdidas">
+<h2>Integrador con pérdidas<a class="headerlink" href="#Integrador-con-pérdidas" title="Link to this heading"></a></h2>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[386]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[596]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="mf">0.5</span>
-<span class="n">R</span> <span class="o">=</span> <span class="o">-</span><span class="n">D</span><span class="o">/</span><span class="p">(</span><span class="n">D</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="n">R</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">R</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">.9</span><span class="p">]</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mf">.1</span><span class="p">]</span>
 
 <span class="n">plot_filter_digital</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
 <span class="n">plot_filter_signal</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">senoidal</span><span class="p">)</span>
@@ -406,12 +373,65 @@
 <img alt="_images/tp-semanal8_9_2.png" src="_images/tp-semanal8_9_2.png" />
 </div>
 </div>
+</section>
+<section id="Filtro-elimina-continua.">
+<h2>Filtro elimina continua.<a class="headerlink" href="#Filtro-elimina-continua." title="Link to this heading"></a></h2>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[387]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[597]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
-<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mf">.8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">DC</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mf">.9</span><span class="p">]</span>
+
+<span class="n">plot_filter_digital</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
+<span class="n">plot_filter_signal</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">senoidal</span> <span class="o">+</span> <span class="n">DC</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+/tmp/ipykernel_10988/1324583376.py:27: UserWarning: The group delay is singular at frequencies [0.000], setting to 0
+  w, gd = group_delay((b, a), fs=fs)
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/tp-semanal8_11_1.png" src="_images/tp-semanal8_11_1.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/tp-semanal8_11_2.png" src="_images/tp-semanal8_11_2.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/tp-semanal8_11_3.png" src="_images/tp-semanal8_11_3.png" />
+</div>
+</div>
+</section>
+<section id="Filtro-ecualizador-de-fase-de-1º-orden.">
+<h2>Filtro ecualizador de fase de 1º orden.<a class="headerlink" href="#Filtro-ecualizador-de-fase-de-1º-orden." title="Link to this heading"></a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[598]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">D</span> <span class="o">=</span> <span class="mf">0.5</span>
+<span class="n">R</span> <span class="o">=</span> <span class="o">-</span><span class="n">D</span><span class="o">/</span><span class="p">(</span><span class="n">D</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="n">R</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">R</span><span class="p">]</span>
 
 <span class="n">plot_filter_digital</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
 <span class="n">plot_filter_signal</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">senoidal</span><span class="p">)</span>
@@ -421,39 +441,122 @@
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
-/tmp/ipykernel_10988/4043758896.py:27: UserWarning: The filter&#39;s denominator is extremely small at frequencies [1.571],             around which a singularity may be present
-  w, gd = group_delay((b, a), fs=fs)
-</pre></div></div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
 <div class="output_area docutils container">
-<img alt="_images/tp-semanal8_10_1.png" src="_images/tp-semanal8_10_1.png" />
+<img alt="_images/tp-semanal8_13_0.png" src="_images/tp-semanal8_13_0.png" />
 </div>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/tp-semanal8_10_2.png" src="_images/tp-semanal8_10_2.png" />
+<img alt="_images/tp-semanal8_13_1.png" src="_images/tp-semanal8_13_1.png" />
 </div>
 </div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/tp-semanal8_10_3.png" src="_images/tp-semanal8_10_3.png" />
+<img alt="_images/tp-semanal8_13_2.png" src="_images/tp-semanal8_13_2.png" />
 </div>
 </div>
+</section>
+<section id="Ej2a)">
+<h2>Ej2a)<a class="headerlink" href="#Ej2a)" title="Link to this heading"></a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[601]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">.8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">.8</span><span class="p">]</span>
+
+<span class="n">plot_filter_digital</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
+<span class="n">plot_filter_signal</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">senoidal</span><span class="p">)</span>
+<span class="n">zplane</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/tp-semanal8_15_0.png" src="_images/tp-semanal8_15_0.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/tp-semanal8_15_1.png" src="_images/tp-semanal8_15_1.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/tp-semanal8_15_2.png" src="_images/tp-semanal8_15_2.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/tp-semanal8_15_3.png" src="_images/tp-semanal8_15_3.png" />
+</div>
+</div>
+</section>
+<section id="Ej2b)">
+<h2>Ej2b)<a class="headerlink" href="#Ej2b)" title="Link to this heading"></a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[600]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">.8</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">.8</span><span class="p">]</span>
+
+<span class="n">plot_filter_digital</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">fs</span><span class="p">)</span>
+<span class="n">plot_filter_signal</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">senoidal</span><span class="p">)</span>
+<span class="n">zplane</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/tp-semanal8_17_0.png" src="_images/tp-semanal8_17_0.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/tp-semanal8_17_1.png" src="_images/tp-semanal8_17_1.png" />
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/tp-semanal8_17_2.png" src="_images/tp-semanal8_17_2.png" />
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/tp-semanal8_17_3.png" src="_images/tp-semanal8_17_3.png" />
+</div>
+</div>
+</section>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tp-semanal-7.html" class="btn btn-neutral float-left" title="TP Semanal 7" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tp-semanal-10.html" class="btn btn-neutral float-right" title="Trabajo semanal 10 - Funciones de excitación no disipativas" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
