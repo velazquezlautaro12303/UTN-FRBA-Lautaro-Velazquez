@@ -17,7 +17,7 @@ Welcome to HomeWorks documentation!
    tp-semanal5
    tp-semanal6
    tp-semanal-7
-   tp-semanal-8
+   tp-semanal8
    tp-semanal-10
    .. main
 

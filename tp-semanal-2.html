@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -15,9 +15,9 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -68,6 +68,7 @@
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal5.html">TP Semanal 5</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal6.html">TP SEMANAL 6</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-7.html">TP Semanal 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-10.html">Trabajo semanal 10 - Funciones de excitación no disipativas</a></li>
 </ul>
 
         </div>
@@ -94,12 +95,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <p><img alt="24c6047cdac145d4bd6af48ebe909495" class="no-scaled-link" src="_images/logo_UTN.svg" width="150" /></p>
+  <p><img alt="c4ac277d2d214c46b01abeb934ba219e" class="no-scaled-link" src="_images/logo_UTN.svg" width="150" /></p>
 <section id="TP-Semanal-2">
-<h1>TP-Semanal 2<a class="headerlink" href="#TP-Semanal-2" title="Permalink to this heading"></a></h1>
+<h1>TP-Semanal 2<a class="headerlink" href="#TP-Semanal-2" title="Link to this heading"></a></h1>
 <section id="Enunciado">
-<h2>Enunciado<a class="headerlink" href="#Enunciado" title="Permalink to this heading"></a></h2>
-<p><img alt="e81d393e6a104dee9f28f2baabf5d193" src="_images/image5.png" /></p>
+<h2>Enunciado<a class="headerlink" href="#Enunciado" title="Link to this heading"></a></h2>
+<p><img alt="03a1ed1605f24d5697310b1bf9f74687" src="_images/image5.png" /></p>
 <p>Consignas de la actividad:</p>
 <p>👉 Hallar la transferencia T=VoVi en función de ωo y Q</p>
 <p>.</p>
@@ -116,7 +117,7 @@
 </div>
 </section>
 <section id="Obtencion-de-la-T(S)">
-<h2>Obtencion de la T(S)<a class="headerlink" href="#Obtencion-de-la-T(S)" title="Permalink to this heading"></a></h2>
+<h2>Obtencion de la T(S)<a class="headerlink" href="#Obtencion-de-la-T(S)" title="Link to this heading"></a></h2>
 <div class="math notranslate nohighlight">
 \[T(S) = \frac {V_0} {V_i}\]</div>
 <p>Busco las ecuaciones con Norton:</p>
@@ -165,7 +166,7 @@
 \[T(S)=\frac{-1}{\$^2+\frac{\$}{Q}+1}\quad(13)\]</div>
 </section>
 <section id="Los-valores-para-conseguir-un-buttherworth-de-segundo-orden-son:">
-<h2>Los valores para conseguir un buttherworth de segundo orden son:<a class="headerlink" href="#Los-valores-para-conseguir-un-buttherworth-de-segundo-orden-son:" title="Permalink to this heading"></a></h2>
+<h2>Los valores para conseguir un buttherworth de segundo orden son:<a class="headerlink" href="#Los-valores-para-conseguir-un-buttherworth-de-segundo-orden-son:" title="Link to this heading"></a></h2>
 <p>Dado que <span class="math notranslate nohighlight">\(Q=\frac{1}{2cos(\phi)}\)</span>, los polos para un segundo orden estan en <span class="math notranslate nohighlight">\(\pi/4\)</span> y <span class="math notranslate nohighlight">\(-\pi/4\)</span>. Por lo tanto:</p>
 <div class="math notranslate nohighlight">
 \[Q=\frac{1}{2cos(\pi/4)}=\frac{1}{\sqrt{2}}\quad(14)\]</div>
@@ -174,18 +175,18 @@
 \[T(S)=\frac{-1}{\$^2+\$\sqrt{2}+1}\quad(15)\]</div>
 <p>Entonces para hacer que (13) satisfaga (15) y de la ecuacion (6), dado que <span class="math notranslate nohighlight">\(G_3\)</span> aparece en todos lados, se establece <span class="math notranslate nohighlight">\(G_3=1\)</span> y entonces <span class="math notranslate nohighlight">\(G_2=1/\sqrt{2}\)</span></p>
 <section id="Simulacion">
-<h3>Simulacion<a class="headerlink" href="#Simulacion" title="Permalink to this heading"></a></h3>
-<p><img alt="8df984e293364dd6906eba2c5f5a7280" src="_images/image7.png" /></p>
+<h3>Simulacion<a class="headerlink" href="#Simulacion" title="Link to this heading"></a></h3>
+<p><img alt="f428ad0e79794fd2bb0c8f894361a0c9" src="_images/image7.png" /></p>
 </section>
 </section>
 <section id="Para-obtener-un-buttherworth-de-4to-orden:">
-<h2>Para obtener un buttherworth de 4to orden:<a class="headerlink" href="#Para-obtener-un-buttherworth-de-4to-orden:" title="Permalink to this heading"></a></h2>
+<h2>Para obtener un buttherworth de 4to orden:<a class="headerlink" href="#Para-obtener-un-buttherworth-de-4to-orden:" title="Link to this heading"></a></h2>
 <p>Este se compone de dos transferencias, donde un par de polos esta a <span class="math notranslate nohighlight">\(S_1=\pi/8\)</span> y el otro <span class="math notranslate nohighlight">\(S_2=3\pi/8\)</span> entonces la T(S) queda:</p>
 <div class="math notranslate nohighlight">
 \[T(S)=\frac{K^2}{(\$^2+2\$cos(\pi/8)+1)(\$^2+2\$cos(3\pi/8)+1)}\]</div>
 <section id="simulacion-1">
-<span id="id1"></span><h3>Simulacion<a class="headerlink" href="#simulacion-1" title="Permalink to this heading"></a></h3>
-<p><img alt="9e185fd989484afb9a8631b167fbc084" src="_images/image8.png" /> <img alt="42fa703f89eb46868f309ea414af088b" src="_images/image9.png" /></p>
+<span id="id1"></span><h3>Simulacion<a class="headerlink" href="#simulacion-1" title="Link to this heading"></a></h3>
+<p><img alt="20ceefb86dbd42859e4b8927b0ddcd71" src="_images/image8.png" /> <img alt="6ac3adfd63e348c191d0626aba4593e6" src="_images/image9.png" /></p>
 </section>
 </section>
 </section>

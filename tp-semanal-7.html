@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -16,15 +16,16 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Trabajo semanal 10 - Funciones de excitación no disipativas" href="tp-semanal-10.html" />
     <link rel="prev" title="TP SEMANAL 6" href="tp-semanal6.html" /> 
 </head>
 
@@ -63,6 +64,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#Verifico-por-Análisis-Nodal-Modificado">Verifico por Análisis Nodal Modificado</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-10.html">Trabajo semanal 10 - Funciones de excitación no disipativas</a></li>
 </ul>
 
         </div>
@@ -90,18 +92,18 @@
            <div itemprop="articleBody">
              
   <section id="TP-Semanal-7">
-<h1>TP Semanal 7<a class="headerlink" href="#TP-Semanal-7" title="Permalink to this heading"></a></h1>
+<h1>TP Semanal 7<a class="headerlink" href="#TP-Semanal-7" title="Link to this heading"></a></h1>
 <section id="Ejercicio-1:">
-<h2>Ejercicio 1:<a class="headerlink" href="#Ejercicio-1:" title="Permalink to this heading"></a></h2>
+<h2>Ejercicio 1:<a class="headerlink" href="#Ejercicio-1:" title="Link to this heading"></a></h2>
 <p>Para el siguiente cuadripolo se pide calcular los parámetros Z.</p>
-<p><img alt="f4d3a6d6f0b544aaaa3f1ca3e9e9bdfe" src="_images/image67.png" /></p>
+<p><img alt="17304bf36e44450fbd0bb54774ddd07e" src="_images/image67.png" /></p>
 </section>
 <section id="Circuito-equivalente">
-<h2>Circuito equivalente<a class="headerlink" href="#Circuito-equivalente" title="Permalink to this heading"></a></h2>
-<p><img alt="c155b427abc24de889a6579222253b8e" src="_images/image66.png" /></p>
+<h2>Circuito equivalente<a class="headerlink" href="#Circuito-equivalente" title="Link to this heading"></a></h2>
+<p><img alt="83cd579833f54fc2ba0918cb4b8c10e1" src="_images/image66.png" /></p>
 </section>
 <section id="Resolveré-por-Análisis-Nodal-Modificado">
-<h2>Resolveré por Análisis Nodal Modificado<a class="headerlink" href="#Resolveré-por-Análisis-Nodal-Modificado" title="Permalink to this heading"></a></h2>
+<h2>Resolveré por Análisis Nodal Modificado<a class="headerlink" href="#Resolveré-por-Análisis-Nodal-Modificado" title="Link to this heading"></a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[94]:
 </pre></div>
@@ -193,9 +195,9 @@ matriz Z:
 </div>
 </section>
 <section id="Ejercicio-2:">
-<h2>Ejercicio 2:<a class="headerlink" href="#Ejercicio-2:" title="Permalink to this heading"></a></h2>
+<h2>Ejercicio 2:<a class="headerlink" href="#Ejercicio-2:" title="Link to this heading"></a></h2>
 <p>Dado el siguiente circuito:</p>
-<p><img alt="1a587501ab2041d5b67c2a47f62cc4cd" src="_images/image68.png" /></p>
+<p><img alt="d31299e0586f48f0b4922b88a5ef6b5b" src="_images/image68.png" /></p>
 <p>👉 Obtener la transferencia de tensión <span class="math notranslate nohighlight">\(\frac{V_o}{V_i}\)</span> por método de cuadripolos (se sugiere referirse a alguno de los métodos de interconexión ya vistos). Ayuda: si <span class="math notranslate nohighlight">\(C_2=\frac{4}{3}\)</span> (se utilizó 1.333 para la simulación), los polos de la transferencia están ubicados sobre una circunferencia de radio unitario.</p>
 <p>👉 Construya la matriz de admitancia indefinida (MAI) del circuito.</p>
 <p>👉 Compute la misma transferencia de tensiónfracción V subíndice o entre V subíndice i mediante MAI.</p>
@@ -275,7 +277,7 @@ $\displaystyle T(s) = \frac{  1 }{s^3 + s^2 \,\,   2 + s \,\,   2 +   1 }$</div>
 </div>
 </section>
 <section id="Verifico-por-Análisis-Nodal-Modificado">
-<h2>Verifico por Análisis Nodal Modificado<a class="headerlink" href="#Verifico-por-Análisis-Nodal-Modificado" title="Permalink to this heading"></a></h2>
+<h2>Verifico por Análisis Nodal Modificado<a class="headerlink" href="#Verifico-por-Análisis-Nodal-Modificado" title="Link to this heading"></a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[86]:
 </pre></div>
@@ -342,6 +344,7 @@ transferencia:
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="tp-semanal6.html" class="btn btn-neutral float-left" title="TP SEMANAL 6" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tp-semanal-10.html" class="btn btn-neutral float-right" title="Trabajo semanal 10 - Funciones de excitación no disipativas" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
