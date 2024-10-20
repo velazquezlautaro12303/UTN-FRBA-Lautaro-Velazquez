@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -16,9 +16,9 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -66,6 +66,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal8.html">Trabajo semanal 8 - Filtros digitales.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-10.html">Trabajo semanal 10 - Funciones de excitación no disipativas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-11.html">Trabajo semanal 11- Síntesis de func. transferencia descargadas NO disipativas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-12.html">Trabajo semanal 12 - Síntesis de cuadripolos simplemente cargados</a></li>
 </ul>
 
         </div>
@@ -93,18 +95,18 @@
            <div itemprop="articleBody">
              
   <section id="TP-Semanal-7">
-<h1>TP Semanal 7<a class="headerlink" href="#TP-Semanal-7" title="Permalink to this heading"></a></h1>
+<h1>TP Semanal 7<a class="headerlink" href="#TP-Semanal-7" title="Link to this heading"></a></h1>
 <section id="Ejercicio-1:">
-<h2>Ejercicio 1:<a class="headerlink" href="#Ejercicio-1:" title="Permalink to this heading"></a></h2>
+<h2>Ejercicio 1:<a class="headerlink" href="#Ejercicio-1:" title="Link to this heading"></a></h2>
 <p>Para el siguiente cuadripolo se pide calcular los parámetros Z.</p>
-<p><img alt="c1baa9ada0a74498a278ea96aae34a24" src="_images/image67.png" /></p>
+<p><img alt="74f87768f7784e0abf761d856c792397" src="_images/image67.png" /></p>
 </section>
 <section id="Circuito-equivalente">
-<h2>Circuito equivalente<a class="headerlink" href="#Circuito-equivalente" title="Permalink to this heading"></a></h2>
-<p><img alt="405ba6070edf4e508aa76acb80c6ccd9" src="_images/image66.png" /></p>
+<h2>Circuito equivalente<a class="headerlink" href="#Circuito-equivalente" title="Link to this heading"></a></h2>
+<p><img alt="c3b41dd9a2cf4d0486e9330e2c0d181f" src="_images/image66.png" /></p>
 </section>
 <section id="Resolveré-por-Análisis-Nodal-Modificado">
-<h2>Resolveré por Análisis Nodal Modificado<a class="headerlink" href="#Resolveré-por-Análisis-Nodal-Modificado" title="Permalink to this heading"></a></h2>
+<h2>Resolveré por Análisis Nodal Modificado<a class="headerlink" href="#Resolveré-por-Análisis-Nodal-Modificado" title="Link to this heading"></a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[94]:
 </pre></div>
@@ -196,9 +198,9 @@ matriz Z:
 </div>
 </section>
 <section id="Ejercicio-2:">
-<h2>Ejercicio 2:<a class="headerlink" href="#Ejercicio-2:" title="Permalink to this heading"></a></h2>
+<h2>Ejercicio 2:<a class="headerlink" href="#Ejercicio-2:" title="Link to this heading"></a></h2>
 <p>Dado el siguiente circuito:</p>
-<p><img alt="bcbaf831b63745e488ce4c7cfe9f97bf" src="_images/image68.png" /></p>
+<p><img alt="c0669d1b7efa4923958c508e506e9968" src="_images/image68.png" /></p>
 <p>👉 Obtener la transferencia de tensión <span class="math notranslate nohighlight">\(\frac{V_o}{V_i}\)</span> por método de cuadripolos (se sugiere referirse a alguno de los métodos de interconexión ya vistos). Ayuda: si <span class="math notranslate nohighlight">\(C_2=\frac{4}{3}\)</span> (se utilizó 1.333 para la simulación), los polos de la transferencia están ubicados sobre una circunferencia de radio unitario.</p>
 <p>👉 Construya la matriz de admitancia indefinida (MAI) del circuito.</p>
 <p>👉 Compute la misma transferencia de tensiónfracción V subíndice o entre V subíndice i mediante MAI.</p>
@@ -278,7 +280,7 @@ $\displaystyle T(s) = \frac{  1 }{s^3 + s^2 \,\,   2 + s \,\,   2 +   1 }$</div>
 </div>
 </section>
 <section id="Verifico-por-Análisis-Nodal-Modificado">
-<h2>Verifico por Análisis Nodal Modificado<a class="headerlink" href="#Verifico-por-Análisis-Nodal-Modificado" title="Permalink to this heading"></a></h2>
+<h2>Verifico por Análisis Nodal Modificado<a class="headerlink" href="#Verifico-por-Análisis-Nodal-Modificado" title="Link to this heading"></a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[86]:
 </pre></div>

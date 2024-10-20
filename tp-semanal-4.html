@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -16,9 +16,9 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -70,6 +70,8 @@
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-7.html">TP Semanal 7</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal8.html">Trabajo semanal 8 - Filtros digitales.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-10.html">Trabajo semanal 10 - Funciones de excitación no disipativas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-11.html">Trabajo semanal 11- Síntesis de func. transferencia descargadas NO disipativas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-12.html">Trabajo semanal 12 - Síntesis de cuadripolos simplemente cargados</a></li>
 </ul>
 
         </div>
@@ -97,9 +99,9 @@
            <div itemprop="articleBody">
              
   <section id="TP-Semanal-4">
-<h1>TP Semanal 4<a class="headerlink" href="#TP-Semanal-4" title="Permalink to this heading"></a></h1>
+<h1>TP Semanal 4<a class="headerlink" href="#TP-Semanal-4" title="Link to this heading"></a></h1>
 <section id="Enunciado">
-<h2>Enunciado<a class="headerlink" href="#Enunciado" title="Permalink to this heading"></a></h2>
+<h2>Enunciado<a class="headerlink" href="#Enunciado" title="Link to this heading"></a></h2>
 <p>Diseñar un filtro pasabajos Chebyshev para obtener una atenuación de 48 dB para frecuencias mayores a 900 Hz, con una atenuación máxima de 0.4 dB desde continua hasta 300 Hz. ( Ancho de Banda reducido para canal Sub Lows )</p>
 <table class="docutils align-default">
 <thead>
@@ -131,7 +133,7 @@
 <li><p>Obtener el diagrama de polos y ceros y graficar a mano alzada en forma cualitativa la respuesta de modulo y fase.</p></li>
 <li><p>Sintetizar el circuito NORMALIZADO utilizando estructuras Kerwin–Huelsman–Newcomb (KHN, también conocido como Variable de Estado ) saliendo desde la salida V3 como indica el siguiente circuito de referencia:</p></li>
 </ol>
-<p><img alt="ef3ef7b6a0f74bb6af26d130b5afc22e" src="_images/image26.png" /></p>
+<p><img alt="479328730e49431cbad647e599764738" src="_images/image26.png" /></p>
 <p>BONUS</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>+10 💎 Simulación numérica en python
 +10 💎 Simulación Circuital con los valores DESNORMALIZADOS ( cumpliendo la plantilla pedida )
@@ -140,7 +142,7 @@
 </div>
 </section>
 <section id="Orden-del-Filtro-y-Parametro-\epsilon">
-<h2>Orden del Filtro y Parametro <span class="math notranslate nohighlight">\(\epsilon\)</span><a class="headerlink" href="#Orden-del-Filtro-y-Parametro-\epsilon" title="Permalink to this heading"></a></h2>
+<h2>Orden del Filtro y Parametro <span class="math notranslate nohighlight">\(\epsilon\)</span><a class="headerlink" href="#Orden-del-Filtro-y-Parametro-\epsilon" title="Link to this heading"></a></h2>
 <p>Dada la ecuacion:</p>
 <div class="math notranslate nohighlight">
 \[\epsilon^2 = 10^{\frac{\alpha_{Max}}{10}}-1\]</div>
@@ -151,7 +153,7 @@
 <p>Obtuve n = 5</p>
 </section>
 <section id="Transferencia-Normalizada">
-<h2>Transferencia Normalizada<a class="headerlink" href="#Transferencia-Normalizada" title="Permalink to this heading"></a></h2>
+<h2>Transferencia Normalizada<a class="headerlink" href="#Transferencia-Normalizada" title="Link to this heading"></a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
@@ -207,7 +209,7 @@ $\displaystyle T(s) =  \frac{0.3861 }{s + 0.3861 } . \frac{0.4946 }{s^2 + s \fra
 </div>
 </section>
 <section id="Manuscrito">
-<h2>Manuscrito<a class="headerlink" href="#Manuscrito" title="Permalink to this heading"></a></h2>
+<h2>Manuscrito<a class="headerlink" href="#Manuscrito" title="Link to this heading"></a></h2>
 <p>Se propone hallar la transferencia del circuito propuesto:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -234,17 +236,17 @@ $\displaystyle T(s) =  \frac{0.3861 }{s + 0.3861 } . \frac{0.4946 }{s^2 + s \fra
 </div>
 </section>
 <section id="Simulaciones">
-<h2>Simulaciones<a class="headerlink" href="#Simulaciones" title="Permalink to this heading"></a></h2>
+<h2>Simulaciones<a class="headerlink" href="#Simulaciones" title="Link to this heading"></a></h2>
 <section id="Normalizado">
-<h3>Normalizado<a class="headerlink" href="#Normalizado" title="Permalink to this heading"></a></h3>
-<p><img alt="4eac263b193940c18ac25e27f66b3e04" src="_images/image29.png" /></p>
-<p><img alt="bc023921ec1d470b896b666fcd41ac9d" src="_images/image30.png" /></p>
+<h3>Normalizado<a class="headerlink" href="#Normalizado" title="Link to this heading"></a></h3>
+<p><img alt="0ac09f3f9b2746758e3023cca3251049" src="_images/image29.png" /></p>
+<p><img alt="ff352ed90231428eb68483a85981d904" src="_images/image30.png" /></p>
 </section>
 <section id="Desnormalizado">
-<h3>Desnormalizado<a class="headerlink" href="#Desnormalizado" title="Permalink to this heading"></a></h3>
+<h3>Desnormalizado<a class="headerlink" href="#Desnormalizado" title="Link to this heading"></a></h3>
 <p>Se propone el siguiente circuito en el cual se aplico desnormalizacion de impedancia y frecuencia:</p>
-<p><img alt="4db359ecd37f4c34ba7b9051e3f293b0" src="_images/image27.png" /></p>
-<p><img alt="63cbe5a45c214c25b0945d3bd398f01d" src="_images/image28.png" /></p>
+<p><img alt="e13dba0e6c99498c8be71853d29b2081" src="_images/image27.png" /></p>
+<p><img alt="fba35120dd5449718c399211553c09a9" src="_images/image28.png" /></p>
 </section>
 </section>
 </section>

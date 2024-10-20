@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -16,9 +16,9 @@
   
         <script src="_static/jquery.js?v=5d32c60e"></script>
         <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
         <script src="_static/doctools.js?v=888ff710"></script>
-        <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
         <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -65,6 +65,8 @@
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-7.html">TP Semanal 7</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal8.html">Trabajo semanal 8 - Filtros digitales.</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tp-semanal-10.html">Trabajo semanal 10 - Funciones de excitación no disipativas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-11.html">Trabajo semanal 11- Síntesis de func. transferencia descargadas NO disipativas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tp-semanal-12.html">Trabajo semanal 12 - Síntesis de cuadripolos simplemente cargados</a></li>
 </ul>
 
         </div>
@@ -92,11 +94,11 @@
            <div itemprop="articleBody">
              
   <section id="TP-SEMANAL-3-TC-II">
-<h1>TP SEMANAL 3 TC II<a class="headerlink" href="#TP-SEMANAL-3-TC-II" title="Permalink to this heading"></a></h1>
+<h1>TP SEMANAL 3 TC II<a class="headerlink" href="#TP-SEMANAL-3-TC-II" title="Link to this heading"></a></h1>
 <section id="Enunciado">
-<h2>Enunciado<a class="headerlink" href="#Enunciado" title="Permalink to this heading"></a></h2>
+<h2>Enunciado<a class="headerlink" href="#Enunciado" title="Link to this heading"></a></h2>
 <p>A partir de la siguiente plantilla, sabiendo que:</p>
-<p><img alt="6550b6a8b35f41ba8ecb7bad32c694cf" src="_images/image14.png" /></p>
+<p><img alt="482d849f200d468e9ce0c178d45872b1" src="_images/image14.png" /></p>
 <p>Obtener la transferencia para máxima planicidad en la banda de paso utilizando los conceptos de partes de función. Recordar que: |T(jω)|2=T(jω)⋅T(−jω)=T(s)⋅T(−s)|s=jω</p>
 <p>Obtener el diagrama de polos y ceros, y un bosquejo de la respuesta en frecuencia.</p>
 <p>Implementar el circuito normalizado con estructuras pasivas separadas mediante buffers.</p>
@@ -110,7 +112,7 @@
 </div>
 </section>
 <section id="Manuscritos">
-<h2>Manuscritos<a class="headerlink" href="#Manuscritos" title="Permalink to this heading"></a></h2>
+<h2>Manuscritos<a class="headerlink" href="#Manuscritos" title="Link to this heading"></a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
@@ -188,12 +190,12 @@
 </div>
 </section>
 <section id="Simulacion-del-circuito-normalizado">
-<h2>Simulacion del circuito normalizado<a class="headerlink" href="#Simulacion-del-circuito-normalizado" title="Permalink to this heading"></a></h2>
-<p><img alt="3b5b4f975ccc41788c4ad0df079ec26e" src="_images/image11.png" /> <img alt="75207931f46748399bc73d76049b9423" src="_images/image12.png" /> <img alt="7ef297f03ab246929433965b8e3794fa" src="_images/image13.png" /></p>
+<h2>Simulacion del circuito normalizado<a class="headerlink" href="#Simulacion-del-circuito-normalizado" title="Link to this heading"></a></h2>
+<p><img alt="ab1b9aab59d44d4aa823822653aff8ca" src="_images/image11.png" /> <img alt="0c231004fe304b19b05dbbaab6b8c092" src="_images/image12.png" /> <img alt="52d5980559dd47e1a732815ea94bafa7" src="_images/image13.png" /></p>
 </section>
 <section id="Simulacion-circuito-de-plantilla-con-C-=-100nF">
-<h2>Simulacion circuito de plantilla con C = 100nF<a class="headerlink" href="#Simulacion-circuito-de-plantilla-con-C-=-100nF" title="Permalink to this heading"></a></h2>
-<p><img alt="b6737b6a589e43108e5cbd8cfb4cb417" src="_images/image17.png" /> <img alt="123e14c5b8f5419586e72d13b7c4493b" src="_images/image15.png" /> <img alt="96a081c5ddb54db6b7b90e9736d3ffe5" src="_images/image16.png" /> <img alt="d8672495bb4e4c1b86536562ee99e051" src="_images/image18.png" /> <img alt="1630484084b54ff781e21c24db179761" src="_images/image19.png" /></p>
+<h2>Simulacion circuito de plantilla con C = 100nF<a class="headerlink" href="#Simulacion-circuito-de-plantilla-con-C-=-100nF" title="Link to this heading"></a></h2>
+<p><img alt="5cd3c50e072f4b2bb0b71a9180aa24f8" src="_images/image17.png" /> <img alt="b149399891fc4bd0afd79cb649e1f183" src="_images/image15.png" /> <img alt="e48ee5bc40bb4ac2974a6e65bb3774b3" src="_images/image16.png" /> <img alt="e4b767169e1a4522882232b06126af2c" src="_images/image18.png" /> <img alt="ae87c4ada07c4c0c815397d8108c6f8a" src="_images/image19.png" /></p>
 </section>
 </section>
 
